@@ -1,0 +1,945 @@
+import Image from "next/image"
+import { useState } from "react";
+
+import {
+  CalendarDays,
+  ChevronDown,
+  X,
+  Menu
+} from "lucide-react";
+
+
+
+function Header() {
+
+      const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
+          <a href="#" className="flex items-center gap-3">
+           <Image
+    src="/images/hakimi-logo.png"
+    alt="Hakimi & Co Accounting"
+    width={230}
+    height={70}
+    priority
+    className="h-16 w-auto object-contain py-4"
+  />
+           
+          </a>
+
+          <nav className="hidden items-center gap-8 text-sm font-medium lg:flex">
+            <a
+              href="#home"
+              className="border-b-2 border-[#c99a45] py-2 text-[#102a4c]"
+            >
+              Home
+            </a>
+
+            <a
+              href="#about"
+              className="py-2 transition hover:text-[#c99a45]"
+            >
+              About
+            </a>
+
+            <a
+              href="#services"
+              className="flex items-center gap-1 py-2 transition hover:text-[#c99a45]"
+            >
+              Services
+              <ChevronDown size={15} />
+            </a>
+
+            <a
+              href="#our-people"
+              className="py-2 transition hover:text-[#c99a45]"
+            >
+              Our Team
+            </a>
+
+            <a
+              href="#careers"
+              className="py-2 transition hover:text-[#c99a45]"
+            >
+              Careers
+            </a>
+
+            <a
+              href="#contact"
+              className="py-2 transition hover:text-[#c99a45]"
+            >
+              Contact
+            </a>
+          </nav>
+
+          <a
+            href="#contact"
+            className="hidden items-center gap-2 rounded-md bg-[#102a4c] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#173c68] lg:flex"
+          >
+            <CalendarDays size={17} />
+            Book a Consultation
+          </a>
+
+          <button
+            type="button"
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="rounded-md border border-slate-200 p-2 lg:hidden"
+            aria-label="Open navigation menu"
+          >
+            {menuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
+
+        {menuOpen && (
+          <nav className="border-t border-slate-100 bg-white px-5 py-5 lg:hidden">
+            <div className="flex flex-col gap-4 text-sm font-medium">
+              {[
+                ["Home", "#home"],
+                ["About", "#about"],
+                ["Services", "#services"],
+                ["Industries", "#industries"],
+                ["Resources", "#resources"],
+                ["Contact", "#contact"],
+              ].map(([label, href]) => (
+                <a
+                  key={label}
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  className="border-b border-slate-100 pb-3"
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+          </nav>
+        )}
+      </header>
+  )
+}
+
+export default Header
+
+
+
+
+
+
+import React from 'react'
+import Image from 'next/image'
+
+
+
+import {
+  ArrowRight,
+  CalendarDays,
+ 
+} from "lucide-react";
+
+
+function Hero() {
+  return (
+      <section className="relative overflow-hidden bg-white">
+      <div className="relative min-h-[480px] lg:min-h-[520px]">
+        {/* Background image */}
+        <Image
+          src="/images/accounting-hero.png"
+          alt="Financial dashboard and accounting workspace"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[72%_center] lg:object-center"
+        />
+
+        {/* White fade over the image */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/10" />
+          <div className="absolute inset-0 bg-white/25 lg:hidden" />
+
+        {/* Extra mobile overlay */}
+        <div className="absolute inset-0 bg-white/30 lg:hidden" />
+
+        {/* Content */}
+        <div className="relative z-10 mx-auto flex h-[420px] max-w-7xl items-center px-6 lg:h-[520px] lg:px-10">
+          <div className="max-w-[570px]">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#c69a45] sm:text-sm">
+              Trusted. Experienced. Reliable.
+            </p>
+
+            <h1 className="mt-4 max-w-[560px] font-serif text-4xl font-bold leading-[1.08] text-[#102a4c] sm:text-4xl lg:text-5xl">
+              Reliable Financial Solutions for Your Business
+            </h1>
+
+            <p className="mt-6 max-w-[530px] text-base leading-7 text-slate-700">
+              Hakimi & Co provides professional tax, assurance, risk, advisory,
+              and cloud accounting services to help individuals and businesses
+              make confident financial decisions.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#contact"
+                className="inline-flex min-h-14 items-center justify-center gap-3 rounded-[4px] bg-[#102a4c] px-7 text-sm font-semibold text-white transition hover:bg-[#173c68]"
+              >
+                <CalendarDays size={17} />
+                Book a Consultation
+              </a>
+
+              <a
+                href="#services"
+                className="inline-flex min-h-14 items-center justify-center gap-4 rounded-[4px] border-2 border-[#102a4c] bg-white/90 px-8 text-sm font-semibold text-[#102a4c] transition hover:bg-white"
+              >
+                Explore Our Services
+                <ArrowRight size={18} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Hero
+
+
+
+import React from 'react'
+import Image from 'next/image';
+
+import {
+  BarChart3,
+  BriefcaseBusiness,
+  HeartHandshake,
+  LockKeyhole,
+} from "lucide-react";
+
+const benefits = [
+  {
+    title: "Experienced Professionals",
+    description:
+      "Our team brings years of experience across a wide range of industries.",
+    icon: BriefcaseBusiness,
+  },
+  {
+    title: "Integrity & Confidentiality",
+    description:
+      "We maintain the highest standards of integrity, privacy and data security.",
+    icon: LockKeyhole,
+  },
+  {
+    title: "Client-Focused Approach",
+    description:
+      "We listen, understand and create solutions that match your unique needs.",
+    icon: HeartHandshake,
+  },
+  {
+    title: "Modern & Efficient",
+    description:
+      "We use modern technology to deliver accurate and timely financial results.",
+    icon: BarChart3,
+  },
+];
+
+
+function About() {
+  return (
+     <section id="about" className="bg-[#f8fafc]">
+            <div className="grid min-h-[570px] lg:grid-cols-2">
+              <div className="relative min-h-[420px] lg:min-h-full">
+                <Image
+                  src="/images/accounting-office.png"
+                  alt="Hakimi and Co accounting office"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+    
+              <div className="flex items-center px-5 py-16 sm:px-10 lg:px-16">
+                <div className="max-w-2xl">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c28a2d]">
+                    About Hakimi & Co
+                  </p>
+    
+                  <h2 className="mt-3 font-serif text-3xl font-bold leading-tight sm:text-4xl">
+                    Partners in Your Financial Success
+                  </h2>
+    
+                  <p className="mt-5 text-sm leading-7 text-slate-600">
+                    At Hakimi & Co, we combine expertise, technology and a
+                    client-focused approach to deliver financial solutions that
+                    make a meaningful difference.
+                  </p>
+    
+                  <div className="mt-9 grid gap-7 sm:grid-cols-2">
+                    {benefits.map((benefit) => {
+                      const Icon = benefit.icon;
+    
+                      return (
+                        <div key={benefit.title} className="flex gap-4">
+                          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-[#c28a2d]">
+                            <Icon size={21} />
+                          </div>
+    
+                          <div>
+                            <h3 className="text-sm font-bold">{benefit.title}</h3>
+                            <p className="mt-2 text-sm leading-6 text-slate-600">
+                              {benefit.description}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+  )
+}
+
+export default About
+
+
+
+
+
+
+
+import { useEffect, useRef, useState } from "react";
+import {
+ 
+  BriefcaseBusiness,
+  Building2,
+  HeartHandshake,
+  Users,
+  
+} from "lucide-react";
+
+
+
+
+const statistics = [
+  {
+    value: 10,
+    suffix: "+",
+    label: "Years of Experience",
+    icon: BriefcaseBusiness,
+  },
+  {
+    value: 500,
+    suffix: "+",
+    label: "Happy Clients",
+    icon: Users,
+  },
+  {
+    value: 20,
+    suffix: "+",
+    label: "Industries Served",
+    icon: Building2,
+  },
+  {
+    value: 100,
+    suffix: "%",
+    label: "Commitment to Success",
+    icon: HeartHandshake,
+  },
+];
+
+
+type AnimatedCounterProps = {
+  value: number;
+  suffix?: string;
+  duration?: number;
+};
+
+function AnimatedCounter({
+  value,
+  suffix = "",
+  duration = 1500,
+}: AnimatedCounterProps) {
+  const [count, setCount] = useState(0);
+  const counterRef = useRef<HTMLSpanElement>(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const element = counterRef.current;
+
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || hasAnimated.current) return;
+
+        hasAnimated.current = true;
+
+        const startTime = performance.now();
+
+        const animate = (currentTime: number) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+
+          const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+          setCount(Math.floor(value * easedProgress));
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          }
+        };
+
+        requestAnimationFrame(animate);
+      },
+      {
+        threshold: 0.3,
+      },
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [duration, value]);
+
+  return (
+    <span ref={counterRef}>
+      {count}
+      {suffix}
+    </span>
+  );
+}
+
+
+
+function Industries() {
+  return (
+    <section
+  id="industries"
+  className="bg-[#102a4c] px-5 py-8 text-white lg:px-8"
+>
+  <div className="mx-auto grid max-w-7xl gap-7 sm:grid-cols-2 lg:grid-cols-4">
+    {statistics.map((stat) => {
+      const Icon = stat.icon;
+
+      return (
+        <div
+          key={stat.label}
+          className="flex items-center justify-center gap-4 lg:justify-start"
+        >
+          <Icon
+            size={34}
+            className="text-[#d5a44e]"
+            strokeWidth={1.5}
+          />
+
+          <div>
+            <p className="text-2xl font-bold text-[#e1b35f]">
+              <AnimatedCounter
+                value={stat.value}
+                suffix={stat.suffix}
+                duration={1800}
+              />
+            </p>
+
+            <p className="mt-1 text-xs text-slate-200">
+              {stat.label}
+            </p>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>
+
+  )
+}
+
+export default Industries
+
+
+
+
+
+
+
+import Image from 'next/image'
+
+
+import {
+  ArrowRight,
+  Check,
+  
+} from "lucide-react";
+
+const cloudFeatures = [
+  "Real-time financial reporting",
+  "Secure cloud storage",
+  "Automated invoicing and payments",
+  "Access anywhere, anytime",
+  "Reduced paperwork",
+  "Better team collaboration",
+];
+
+
+
+function Resources() {
+  return (
+    <section
+        id="resources"
+        className="overflow-hidden bg-white px-5 py-20 lg:px-8"
+      >
+        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c28a2d]">
+              Cloud Accounting
+            </p>
+
+            <h2 className="mt-3 max-w-lg font-serif text-3xl font-bold leading-tight sm:text-4xl">
+              Smarter Accounting with the Cloud
+            </h2>
+
+            <p className="mt-5 max-w-xl text-sm leading-7 text-slate-600">
+              Access your financial information in real time, streamline your
+              processes and make better business decisions from anywhere.
+            </p>
+
+            <div className="mt-7 grid gap-3 sm:grid-cols-2">
+              {cloudFeatures.map((feature) => (
+                <div
+                  key={feature}
+                  className="flex items-center gap-3 text-sm text-slate-700"
+                >
+                  <Check size={17} className="shrink-0 text-[#c28a2d]" />
+                  {feature}
+                </div>
+              ))}
+            </div>
+
+            <a
+              href="#contact"
+              className="mt-9 inline-flex items-center gap-2 rounded-md border border-[#102a4c] px-6 py-3 text-sm font-semibold transition hover:bg-[#102a4c] hover:text-white"
+            >
+              Learn More About Cloud Accounting
+              <ArrowRight size={16} />
+            </a>
+          </div>
+
+          <div>
+            <div className="relative mx-auto aspect-[4/3] w-full max-w-xl">
+              <Image
+                src="/images/cloud2.png"
+                alt="Cloud accounting dashboard displayed on multiple devices"
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-7 text-lg font-bold text-slate-500">
+              <span>QuickBooks</span>
+              <span>Xero</span>
+              <span>Sage</span>
+            </div>
+          </div>
+        </div>
+      </section> 
+  )
+}
+
+export default Resources
+
+
+
+
+
+
+
+
+import {
+  ArrowRight,
+  Cloud,
+  FileCheck2,
+  FileText,
+  ShieldCheck,
+  TrendingUp,
+
+} from "lucide-react";
+
+
+
+const services = [
+  {
+    title: "Tax Services",
+    description:
+      "Tax planning, preparation and filing for individuals and businesses.",
+    icon: FileText,
+  },
+  {
+    title: "Assurance Services",
+    description:
+      "Audit, review and compilation services to ensure accuracy and transparency.",
+    icon: FileCheck2,
+  },
+  {
+    title: "Risk Management",
+    description:
+      "Identify financial and operational risks and implement practical solutions.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Business Advisory",
+    description:
+      "Strategic guidance to help your business grow, improve and make better decisions.",
+    icon: TrendingUp,
+  },
+  {
+    title: "Cloud Accounting",
+    description:
+      "Cloud-based bookkeeping and real-time financial reporting from anywhere.",
+    icon: Cloud,
+  },
+];
+
+function Services() {
+  return (
+      <section id="services" className="bg-white px-5 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c28a2d]">
+              Our Services
+            </p>
+
+            <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">
+              Comprehensive Accounting Solutions
+            </h2>
+
+            <p className="mt-4 text-sm leading-6 text-slate-600">
+              We offer professional services tailored to your needs, helping
+              you achieve clarity, compliance and long-term financial success.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            {services.map((service) => {
+              const Icon = service.icon;
+
+              return (
+                <article
+                  key={service.title}
+                  className="group flex min-h-[300px] flex-col items-center rounded-md border border-slate-200 bg-white px-6 py-8 text-center transition duration-300 hover:-translate-y-1 hover:border-[#d8b069] hover:shadow-xl"
+                >
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#f6f8fb] text-[#102a4c] transition group-hover:bg-[#102a4c] group-hover:text-white">
+                    <Icon size={30} strokeWidth={1.6} />
+                  </div>
+
+                  <h3 className="mt-5 text-base font-bold">{service.title}</h3>
+
+                  <p className="mt-4 text-sm leading-6 text-slate-600">
+                    {service.description}
+                  </p>
+
+                  <a
+                    href="#contact"
+                    className="mt-auto flex items-center gap-2 pt-6 text-sm font-semibold text-[#bd8124]"
+                  >
+                    Learn More
+                    <ArrowRight size={14} />
+                  </a>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+  )
+}
+
+export default Services
+
+
+
+
+
+
+
+
+"use client";
+
+import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+
+const testimonials = [
+  {
+    text: "Hakimi & Co has been an incredible partner for our business. Their attention to detail and professionalism give us complete peace of mind.",
+    name: "Sarah M.",
+    role: "Owner, Retail Business",
+  },
+  {
+    text: "They helped us streamline our accounting process and provided valuable insights that improved our financial performance.",
+    name: "David R.",
+    role: "CEO, Construction Company",
+  },
+  {
+    text: "The team is responsive, knowledgeable and always goes above and beyond to support our accounting and advisory needs.",
+    name: "James L.",
+    role: "Startup Founder",
+  },
+  {
+    text: "Their cloud accounting services made it much easier for us to manage invoices, expenses and financial reports from anywhere.",
+    name: "Nadia A.",
+    role: "Owner, Consulting Firm",
+  },
+  {
+    text: "Hakimi & Co made our corporate tax filing process clear and stress-free. We always receive accurate and timely support.",
+    name: "Michael T.",
+    role: "Managing Director",
+  },
+  {
+    text: "The advisory team helped us improve our budgeting process and make better decisions for the future of our business.",
+    name: "Farah H.",
+    role: "Small Business Owner",
+  },
+  {
+    text: "Their professionalism, communication and attention to detail have made them a trusted financial partner for our company.",
+    name: "Daniel K.",
+    role: "Operations Manager",
+  },
+  {
+    text: "We received excellent support with bookkeeping, payroll and financial reporting. The entire process was organized and efficient.",
+    name: "Amina S.",
+    role: "Restaurant Owner",
+  },
+];
+
+function Testimonials() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(3);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      if (window.innerWidth < 640) {
+        setCardsPerView(1);
+      } else if (window.innerWidth < 1024) {
+        setCardsPerView(2);
+      } else {
+        setCardsPerView(3);
+      }
+    };
+
+    updateCardsPerView();
+
+    window.addEventListener("resize", updateCardsPerView);
+
+    return () => {
+      window.removeEventListener("resize", updateCardsPerView);
+    };
+  }, []);
+
+  const maxIndex = Math.max(testimonials.length - cardsPerView, 0);
+
+  useEffect(() => {
+    if (isPaused || maxIndex === 0) return;
+
+    const interval = window.setInterval(() => {
+      setCurrentIndex((previousIndex) =>
+        previousIndex >= maxIndex ? 0 : previousIndex + 1,
+      );
+    }, 4000);
+
+    return () => {
+      window.clearInterval(interval);
+    };
+  }, [isPaused, maxIndex]);
+
+  useEffect(() => {
+  const updateCardsPerView = () => {
+    let cards = 3;
+
+    if (window.innerWidth < 640) {
+      cards = 1;
+    } else if (window.innerWidth < 1024) {
+      cards = 2;
+    }
+
+    setCardsPerView(cards);
+
+    const newMax = Math.max(testimonials.length - cards, 0);
+
+    setCurrentIndex((prev) => Math.min(prev, newMax));
+  };
+
+  updateCardsPerView();
+
+  window.addEventListener("resize", updateCardsPerView);
+
+  return () => window.removeEventListener("resize", updateCardsPerView);
+}, []);
+
+  const handlePrevious = () => {
+    setCurrentIndex((previousIndex) =>
+      previousIndex <= 0 ? maxIndex : previousIndex - 1,
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((previousIndex) =>
+      previousIndex >= maxIndex ? 0 : previousIndex + 1,
+    );
+  };
+
+  const cardWidth = 100 / cardsPerView;
+
+  return (
+    <section className="overflow-hidden bg-[#f8fafc] px-5 py-20 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c28a2d]">
+            Client Testimonials
+          </p>
+
+          <h2 className="mt-3 font-serif text-3xl font-bold text-[#102a4c] sm:text-4xl">
+            What Our Clients Say
+          </h2>
+        </div>
+
+        <div
+          className="relative mt-12"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-700 ease-in-out"
+              style={{
+                transform: `translateX(-${currentIndex * cardWidth}%)`,
+              }}
+            >
+              {testimonials.map((testimonial) => (
+                <div
+                  key={testimonial.name}
+                  className="shrink-0 px-3"
+                  style={{
+                    width: `${cardWidth}%`,
+                  }}
+                >
+                  <article className="relative h-full min-h-[275px] rounded-md border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <Quote
+                      size={44}
+                      className="absolute left-5 top-5 text-slate-100"
+                      fill="currentColor"
+                    />
+
+                    <p className="relative pt-5 text-sm leading-7 text-slate-600">
+                      {testimonial.text}
+                    </p>
+
+                    <div className="mt-6 border-t border-slate-100 pt-5">
+                      <p className="text-sm font-bold text-[#102a4c]">
+                        {testimonial.name}
+                      </p>
+
+                      <p className="mt-1 text-xs text-slate-500">
+                        {testimonial.role}
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={handlePrevious}
+            aria-label="Previous testimonials"
+            className="absolute left-0 top-1/2 z-10 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-[#102a4c] shadow-md transition hover:bg-[#102a4c] hover:text-white"
+          >
+            <ChevronLeft size={20} />
+          </button>
+
+          <button
+            type="button"
+            onClick={handleNext}
+            aria-label="Next testimonials"
+            className="absolute right-0 top-1/2 z-10 flex h-10 w-10 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-[#102a4c] shadow-md transition hover:bg-[#102a4c] hover:text-white"
+          >
+            <ChevronRight size={20} />
+          </button>
+        </div>
+
+        <div className="mt-8 flex justify-center gap-2">
+          {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              onClick={() => setCurrentIndex(index)}
+              aria-label={`Show testimonial slide ${index + 1}`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                currentIndex === index
+                  ? "w-7 bg-[#c99a45]"
+                  : "w-2 bg-slate-300 hover:bg-slate-400"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Testimonials;
+
+
+
+
+
+
+
+
+
+
+import {
+  ArrowRight,
+  CalendarDays,
+
+} from "lucide-react";
+
+
+
+function CTA() {
+  return (
+    <section className="bg-[#123763] px-5 py-9 text-white lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-7 lg:flex-row">
+          <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:text-left">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#c99a45]">
+              <CalendarDays size={30} />
+            </div>
+
+            <div>
+              <h2 className="font-serif text-2xl font-bold sm:text-3xl">
+                Let&apos;s Make Your Finances Simpler
+              </h2>
+
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-200">
+                Schedule a consultation with our professionals and take the
+                first step toward financial clarity and sustainable growth.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="#contact"
+            className="flex min-w-[250px] items-center justify-center gap-3 rounded-md bg-[#d4a34e] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#bf8c37]"
+          >
+            Schedule a Consultation
+            <ArrowRight size={17} />
+          </a>
+        </div>
+      </section>
+  )
+}
+
+export default CTA
+
+
+
+
