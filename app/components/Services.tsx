@@ -1,4 +1,6 @@
 
+import Link from "next/link";
+
 import {
   ArrowRight,
   Cloud,
@@ -46,56 +48,89 @@ const services = [
 
 function Services() {
   return (
-      <section id="services" className="bg-white px-5 py-20 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c28a2d]">
-              Our Services
-            </p>
+    <section className="relative px-5 py-20 lg:px-10">
+      <div className="absolute right-0 top-36 hidden w-24 opacity-40 lg:block">
+        {/* <BotanicalDecoration /> */}
+      </div>
 
-            <h2 className="mt-3 font-serif text-3xl font-bold sm:text-4xl">
-              Comprehensive Accounting Solutions
-            </h2>
+      <div className="mx-auto max-w-[1380px]">
+        <SectionHeading
+          eyebrow="Our Services"
+          title="Comprehensive Accounting Solutions"
+          description="We offer a full range of professional services tailored to your needs. Our goal is simple: to help you achieve clarity, compliance and long-term financial success."
+        />
 
-            <p className="mt-4 text-sm leading-6 text-slate-600">
-              We offer professional services tailored to your needs, helping
-              you achieve clarity, compliance and long-term financial success.
-            </p>
-          </div>
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
+          {services.map((service) => {
+            const Icon = service.icon;
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-            {services.map((service) => {
-              const Icon = service.icon;
+            return (
+              <article
+                key={service.title}
+                className="group flex min-h-[340px] flex-col items-center rounded-xl border border-[#80ab7e]/30 bg-white px-6 py-8 text-center shadow-[0_10px_40px_rgba(133,77,27,0.05)] transition hover:-translate-y-2 hover:shadow-[0_18px_45px_rgba(133,77,27,0.12)]"
+              >
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#80ab7e]/10">
+                  <Icon
+                    size={39}
+                    strokeWidth={1.5}
+                    className="text-[#6e913d]"
+                  />
+                </div>
 
-              return (
-                <article
-                  key={service.title}
-                  className="group flex min-h-[300px] flex-col items-center rounded-md border border-slate-200 bg-white px-6 py-8 text-center transition duration-300 hover:-translate-y-1 hover:border-[#d8b069] hover:shadow-xl"
+                <h3 className="mt-6 font-serif text-xl font-semibold">
+                  {service.title}
+                </h3>
+
+                <p className="mt-4 flex-1 text-sm leading-6 text-[#554b44]">
+                  {service.description}
+                </p>
+
+                <Link
+                  href="/services"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#6e913d]"
                 >
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#f6f8fb] text-[#102a4c] transition group-hover:bg-[#102a4c] group-hover:text-white">
-                    <Icon size={30} strokeWidth={1.6} />
-                  </div>
-
-                  <h3 className="mt-5 text-base font-bold">{service.title}</h3>
-
-                  <p className="mt-4 text-sm leading-6 text-slate-600">
-                    {service.description}
-                  </p>
-
-                  <a
-                    href="#contact"
-                    className="mt-auto flex items-center gap-2 pt-6 text-sm font-semibold text-[#bd8124]"
-                  >
-                    Learn More
-                    <ArrowRight size={14} />
-                  </a>
-                </article>
-              );
-            })}
-          </div>
+                  Learn More
+                  <ArrowRight
+                    size={16}
+                    className="transition group-hover:translate-x-1"
+                  />
+                </Link>
+              </article>
+            );
+          })}
         </div>
-      </section>
-  )
+      </div>
+    </section>
+  );
 }
+
+function SectionHeading({
+  eyebrow,
+  title,
+  description,
+}: {
+  eyebrow: string;
+  title: string;
+  description?: string;
+}) {
+  return (
+    <div className="mx-auto max-w-3xl text-center">
+      <p className="text-sm font-bold uppercase tracking-[0.17em] text-[#80ab7e]">
+        {eyebrow}
+      </p>
+
+      <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight lg:text-4xl">
+        {title}
+      </h2>
+
+      <div className="mx-auto mt-4 h-[3px] w-14 rounded-full bg-[#ffdb11]" />
+
+      {description && (
+        <p className="mt-5 text-sm leading-7 text-[#554b44]">{description}</p>
+      )}
+    </div>
+  );
+}
+
 
 export default Services

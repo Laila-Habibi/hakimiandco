@@ -103,47 +103,37 @@ function AnimatedCounter({
 
 
 
-function Industries() {
+function Statistics() {
   return (
-    <section
-  id="industries"
-  className="bg-[#102a4c] px-5 py-8 text-white lg:px-8"
->
-  <div className="mx-auto grid max-w-7xl gap-7 sm:grid-cols-2 lg:grid-cols-4">
-    {statistics.map((stat) => {
-      const Icon = stat.icon;
+    <section className="bg-[#718c39] px-5 py-7 text-white">
+      <div className="mx-auto grid max-w-[1320px] gap-7 sm:grid-cols-2 lg:grid-cols-4">
+        {statistics.map((statistic, index) => {
+          const Icon = statistic.icon;
 
-      return (
-        <div
-          key={stat.label}
-          className="flex items-center justify-center gap-4 lg:justify-start"
-        >
-          <Icon
-            size={34}
-            className="text-[#d5a44e]"
-            strokeWidth={1.5}
-          />
+          return (
+            <div
+              key={statistic.label}
+              className={`flex items-center justify-center gap-4 py-2 ${
+                index !== statistics.length - 1
+                  ? "lg:border-r lg:border-white/25"
+                  : ""
+              }`}
+            >
+              <Icon size={39} strokeWidth={1.5} className="text-[#ffdb11]" />
 
-          <div>
-            <p className="text-2xl font-bold text-[#e1b35f]">
-              <AnimatedCounter
-                value={stat.value}
-                suffix={stat.suffix}
-                duration={1800}
-              />
-            </p>
-
-            <p className="mt-1 text-xs text-slate-200">
-              {stat.label}
-            </p>
-          </div>
-        </div>
-      );
-    })}
-  </div>
-</section>
-
-  )
+              <div>
+                <p className="text-3xl font-semibold text-[#ffdb11]">
+                  {statistic.value}
+                </p>
+                <p className="mt-1 text-xs">{statistic.label}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
 }
 
-export default Industries
+
+export default Statistics

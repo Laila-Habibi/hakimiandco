@@ -1,5 +1,5 @@
-import Image from "next/image"
-import { useState } from "react";
+
+import Link from "next/link";
 
 import {
   CalendarDays,
@@ -9,114 +9,110 @@ import {
 } from "lucide-react";
 
 
-
-function Header() {
-
-      const [menuOpen, setMenuOpen] = useState(false);
-
+function Header({
+  mobileMenuOpen,
+  setMobileMenuOpen,
+}: {
+  mobileMenuOpen: boolean;
+  setMobileMenuOpen: (open: boolean) => void;
+}) {
   return (
-     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
-          <a href="#" className="flex items-center gap-3">
-           <Image
-    src="/images/hakimi-logo.png"
-    alt="Hakimi & Co Accounting"
-    width={230}
-    height={70}
-    priority
-    className="h-16 w-auto object-contain py-4"
-  />
-           
-          </a>
+    <header className="relative z-50 border-b border-[#f5e088]/40 bg-[#fffdf7]">
+      <nav className="mx-auto flex min-h-20 max-w-[1440px] items-center justify-between px-5 lg:px-10">
+        <Link href="/" className="flex items-center gap-3">
+          <div className="relative text-4xl font-serif font-semibold leading-none text-[#6e913d]">
+            H
+            <span className="absolute bottom-0 left-4 text-[var(--primary-golden)]">&</span>
+            <span className="ml-1">C</span>
+          </div>
 
-          <nav className="hidden items-center gap-8 text-sm font-medium lg:flex">
-            <a
-              href="#home"
-              className="border-b-2 border-[#c99a45] py-2 text-[#102a4c]"
-            >
-              Home
-            </a>
+          <div>
+            <p className="font-serif text-xl font-semibold tracking-wide text-[#3d210f]">
+              HAKIMI & CO
+            </p>
+            <p className="text-[10px] font-semibold tracking-[0.3em] text-[#80ab7e]">
+              ACCOUNTING
+            </p>
+          </div>
+        </Link>
 
-            <a
-              href="#about"
-              className="py-2 transition hover:text-[#c99a45]"
-            >
-              About
-            </a>
-
-            <a
-              href="#services"
-              className="flex items-center gap-1 py-2 transition hover:text-[#c99a45]"
-            >
-              Services
-              <ChevronDown size={15} />
-            </a>
-
-            <a
-              href="#our-people"
-              className="py-2 transition hover:text-[#c99a45]"
-            >
-              Our Team
-            </a>
-
-            <a
-              href="#careers"
-              className="py-2 transition hover:text-[#c99a45]"
-            >
-              Careers
-            </a>
-
-            <a
-              href="#contact"
-              className="py-2 transition hover:text-[#c99a45]"
-            >
-              Contact
-            </a>
-          </nav>
-
-          <a
-            href="#contact"
-            className="hidden items-center gap-2 rounded-md bg-[#102a4c] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#173c68] lg:flex"
+        <div className="hidden items-center gap-9 text-sm font-medium lg:flex">
+          <Link
+            href="/"
+            className="border-b-2 border-[var(--primary-green)] py-7 text-[#3d210f]"
           >
-            <CalendarDays size={17} />
-            Book a Consultation
-          </a>
+            Home
+          </Link>
 
-          <button
-            type="button"
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="rounded-md border border-slate-200 p-2 lg:hidden"
-            aria-label="Open navigation menu"
+          <Link href="/about" className="transition hover:text-[var(--primary-green)]">
+            About
+          </Link>
+
+          <Link
+            href="/services"
+            className="flex items-center gap-1 transition hover:text-[var(--primary-green)]"
           >
-            {menuOpen ? <X /> : <Menu />}
-          </button>
+            Services
+            <ChevronDown size={15} />
+          </Link>
+
+          <Link href="/industries" className="transition hover:text-[var(--primary-green)]">
+            Industries
+          </Link>
+
+          <Link href="/resources" className="transition hover:text-[var(--primary-green)]">
+            Resources
+          </Link>
+
+          <Link href="/contact" className="transition hover:text-[var(--primary-green)]">
+            Contact
+          </Link>
         </div>
 
-        {menuOpen && (
-          <nav className="border-t border-slate-100 bg-white px-5 py-5 lg:hidden">
-            <div className="flex flex-col gap-4 text-sm font-medium">
-              {[
-                ["Home", "#home"],
-                ["About", "#about"],
-                ["Services", "#services"],
-                ["Industries", "#industries"],
-                ["Resources", "#resources"],
-                ["Contact", "#contact"],
-              ].map(([label, href]) => (
-                <a
-                  key={label}
-                  href={href}
-                  onClick={() => setMenuOpen(false)}
-                  className="border-b border-slate-100 pb-3"
+        <Link
+          href="/contact"
+          className="hidden items-center gap-3 rounded-lg bg-[#6e913d] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--dark-green)] lg:flex"
+        >
+          Book a Consultation
+          <CalendarDays size={17} />
+        </Link>
+
+        <button
+          type="button"
+          aria-label="Open navigation menu"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="rounded-md border border-[#854d1b]/20 p-2 lg:hidden"
+        >
+          {mobileMenuOpen ? <X /> : <Menu />}
+        </button>
+      </nav>
+
+      {mobileMenuOpen && (
+        <div className="absolute left-0 right-0 top-full border-t border-[#f5e088] bg-[#fffdf7] px-6 py-6 shadow-xl lg:hidden">
+          <div className="flex flex-col gap-5 text-sm font-semibold">
+            {["Home", "About", "Services", "Industries", "Resources", "Contact"].map(
+              (item) => (
+                <Link
+                  key={item}
+                  href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  {label}
-                </a>
-              ))}
-            </div>
-          </nav>
-        )}
-      </header>
-  )
+                  {item}
+                </Link>
+              ),
+            )}
+
+            <Link
+              href="/contact"
+              className="rounded-lg bg-[#6e913d] px-5 py-3 text-center text-white hover:bg-[var(--dark-green)]"
+            >
+              Book a Consultation
+            </Link>
+          </div>
+        </div>
+      )}
+    </header>
+  );
 }
 
 export default Header

@@ -1,75 +1,79 @@
-import React from 'react'
-import Image from 'next/image'
 
+import Image from 'next/image'
+import Link from 'next/link';
 
 
 import {
   ArrowRight,
   CalendarDays,
+  
  
 } from "lucide-react";
 
 
 function Hero() {
   return (
-      <section className="relative overflow-hidden bg-white">
-      <div className="relative min-h-[480px] lg:min-h-[520px]">
-        {/* Background image */}
-        <Image
-          src="/images/accounting-hero.png"
-          alt="Financial dashboard and accounting workspace"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[72%_center] lg:object-center"
-        />
+    <section className="relative min-h-[610px] bg-[#fff9e8]">
+      <div className="absolute left-0 top-0 h-full w-24 opacity-50">
+        {/* <BotanicalDecoration /> */}
+      </div>
 
-        {/* White fade over the image */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/10" />
-          <div className="absolute inset-0 bg-white/25 lg:hidden" />
-
-        {/* Extra mobile overlay */}
-        <div className="absolute inset-0 bg-white/30 lg:hidden" />
-
-        {/* Content */}
-        <div className="relative z-10 mx-auto flex h-[420px] max-w-7xl items-center px-6 lg:h-[520px] lg:px-10">
-          <div className="max-w-[570px]">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#c69a45] sm:text-sm">
+      <div className="mx-auto grid max-w-[1440px] lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="relative z-10 flex items-center px-6 py-20 lg:px-16 lg:py-24">
+          <div className="max-w-xl">
+            <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-[#80ab7e]">
               Trusted. Experienced. Reliable.
             </p>
 
-            <h1 className="mt-4 max-w-[560px] font-serif text-4xl font-bold leading-[1.08] text-[#102a4c] sm:text-4xl lg:text-5xl">
-              Reliable Financial Solutions for Your Business
+            <h1 className="font-serif text-5xl font-semibold leading-[1.05] text-[#4a250e] sm:text-6xl lg:text-5xl">
+              Reliable Financial Solutions for Your{" "}
+              <span className="text-[#6e913d]">Business</span>
             </h1>
 
-            <p className="mt-6 max-w-[530px] text-base leading-7 text-slate-700">
-              Hakimi & Co provides professional tax, assurance, risk, advisory,
+            <div className="mt-5 h-[3px] w-14 rounded-full bg-[#ffdb11]" />
+
+            <p className="mt-6 max-w-lg text-base leading-7 text-[#4d433c]">
+              Hakimi & Co provides professional tax, assurance, risk, advisory
               and cloud accounting services to help individuals and businesses
               make confident financial decisions.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#contact"
-                className="inline-flex min-h-14 items-center justify-center gap-3 rounded-[4px] bg-[#102a4c] px-7 text-sm font-semibold text-white transition hover:bg-[#173c68]"
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-3 rounded-lg bg-[#6e913d] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[#854d1b]"
               >
-                <CalendarDays size={17} />
+                <CalendarDays size={18} />
                 Book a Consultation
-              </a>
+              </Link>
 
-              <a
-                href="#services"
-                className="inline-flex min-h-14 items-center justify-center gap-4 rounded-[4px] border-2 border-[#102a4c] bg-white/90 px-8 text-sm font-semibold text-[#102a4c] transition hover:bg-white"
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center gap-3 rounded-lg border border-[#6e913d] px-6 py-4 text-sm font-semibold text-[#6e913d] transition hover:bg-[#6e913d] hover:text-white"
               >
                 Explore Our Services
                 <ArrowRight size={18} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
+
+        <div className="relative min-h-[450px] lg:min-h-[610px]">
+          <div className="absolute inset-y-0 left-0 z-10 hidden w-33 bg-gradient-to-r from-[#fff9e8] to-transparent lg:block" />
+
+          <Image
+            src="/images/accounting-hero2.png"
+            alt="Laptop displaying accounting charts on an office desk"
+            fill
+            priority
+            className="object-cover"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-r from-[#fff9e8]/20 to-transparent" />
+        </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Hero
