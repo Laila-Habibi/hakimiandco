@@ -85,7 +85,7 @@ function CTA() {
 
         <Link
           href="/contact"
-          className="inline-flex shrink-0 items-center gap-3 rounded-full bg-[#6e913d] px-8 py-4 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(128,171,126,1)] transition duration-300 hover:-translate-y-1 hover:bg-[#854d1b]"
+          className="inline-flex shrink-0 items-center gap-3 rounded-full bg-[#6e913d] px-8 py-4 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(128,171,126,1)] transition duration-300 hover:-translate-y-1 hover:bg-[var(--dark-green)]"
         >
           Schedule a Consultation
           <ArrowRight size={19} />

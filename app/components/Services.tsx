@@ -27,9 +27,9 @@ const services = [
     icon: FileCheck2,
   },
   {
-    title: "Risk Management",
+    title: "Payroll Solutions",
     description:
-      "Identify financial and operational risks and implement practical solutions.",
+      "Simplify payroll processing and ensure accurate employee payments.",
     icon: ShieldCheck,
   },
   {
@@ -39,9 +39,9 @@ const services = [
     icon: TrendingUp,
   },
   {
-    title: "Cloud Accounting",
+    title: "AI Integration",
     description:
-      "Cloud-based bookkeeping and real-time financial reporting from anywhere.",
+      "Integrate AI solutions to automate routine tasks and enhance financial analysis.",
     icon: Cloud,
   },
 ];

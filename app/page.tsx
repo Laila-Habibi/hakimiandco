@@ -20,10 +20,7 @@ export default function HomePage() {
 
   return (
     <main className="overflow-hidden bg-[#fffdf7] text-[#3d210f]">
-      <Header
-        mobileMenuOpen={mobileMenuOpen}
-        setMobileMenuOpen={setMobileMenuOpen}
-      />
+     
 
       <Hero />
       <Services />
@@ -32,7 +29,7 @@ export default function HomePage() {
       <Resources />
       <Testimonials />
       <CTA />
-      <Footer />
+     
 
       
     </main>

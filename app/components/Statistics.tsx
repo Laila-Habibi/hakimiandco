@@ -1,4 +1,5 @@
 
+"use client"
 import { useEffect, useRef, useState } from "react";
 import {
  
@@ -123,7 +124,10 @@ function Statistics() {
 
               <div>
                 <p className="text-3xl font-semibold text-[#ffdb11]">
-                  {statistic.value}
+                 <AnimatedCounter
+                  value={statistic.value}
+                  suffix={statistic.suffix}
+                  />
                 </p>
                 <p className="mt-1 text-xs">{statistic.label}</p>
               </div>

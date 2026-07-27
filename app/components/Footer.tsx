@@ -6,15 +6,21 @@ import {
   MapPin,
   Phone,
   Send,
- 
 } from "lucide-react";
+
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const footerServices = [
   "Tax Services",
   "Assurance Services",
-  "Risk Management",
+  "Payroll Solutions",
   "Business Advisory",
-  "Cloud Accounting",
+  "AI Integration",
   "Bookkeeping",
 ];
 
@@ -50,7 +56,7 @@ function Footer() {
           </p>
 
           <div className="mt-6 flex gap-3">
-            {[Mail, Mail, Mail].map((Icon, index) => (
+            {[FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter].map((Icon, index) => (
               <Link
                 key={index}
                 href="#"

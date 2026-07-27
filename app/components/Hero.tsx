@@ -25,23 +25,24 @@ function Hero() {
               Trusted. Experienced. Reliable.
             </p>
 
-            <h1 className="font-serif text-5xl font-semibold leading-[1.05] text-[#4a250e] sm:text-6xl lg:text-5xl">
+            <h1 className="font-serif text-5xl font-semibold leading-[1.05] text-[#4a250e] sm:text-6xl lg:text-5xl animate-fade-up">
               Reliable Financial Solutions for Your{" "}
               <span className="text-[#6e913d]">Business</span>
             </h1>
 
             <div className="mt-5 h-[3px] w-14 rounded-full bg-[#ffdb11]" />
 
-            <p className="mt-6 max-w-lg text-base leading-7 text-[#4d433c]">
+            <p className="animate-fade-up mt-6 max-w-lg text-base leading-7 text-[#4d433c]">
+             
               Hakimi & Co provides professional tax, assurance, risk, advisory
               and cloud accounting services to help individuals and businesses
               make confident financial decisions.
             </p>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row animate-fade-up">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 rounded-lg bg-[#6e913d] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[#854d1b]"
+                className="inline-flex items-center justify-center gap-3 rounded-lg bg-[#6e913d] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[var(--dark-green)]"
               >
                 <CalendarDays size={18} />
                 Book a Consultation
