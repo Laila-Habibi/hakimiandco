@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import SectionHeading from "../components/SectionHeading";
 
 export default function AboutMission() {
   return (
@@ -49,18 +50,13 @@ export default function AboutMission() {
           </div>
 
           <div className="relative z-10 max-w-sm">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--light-green)]">
-              Our Mission
-            </p>
+           <SectionHeading
+           eyebrow="Our Mission"
+           title="Experts Who Care"
+           align="left"
+           />
 
-            <h2 className="mt-5 font-serif text-4xl leading-tight text-[var(--primary-brown)] sm:text-5xl">
-              Experts Who
-              <span className="block text-[var(--primary-green)]">
-                Care
-              </span>
-            </h2>
-
-            <div className="mt-6 h-[3px] w-12 rounded-full bg-[var(--primary-golden)]" />
+    
 
             <p className="mt-7 text-sm leading-7 text-[#5c5048]">
               Our team combines technical expertise with a client-first

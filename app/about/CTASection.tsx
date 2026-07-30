@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, CalendarDays } from "lucide-react";
+import SectionHeading from "../components/SectionHeading";
+
 
 export default function AboutCTA() {
   return (
@@ -25,8 +27,18 @@ export default function AboutCTA() {
             <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-[var(--primary-golden)] bg-[var(--primary-green)] text-[#f5e088] shadow-lg shadow-[#56742f]/20 transition duration-300 hover:scale-105">
               <CalendarDays size={40} strokeWidth={1.6} />
             </div>
+            
 
-            <div>
+            <SectionHeading
+            eyebrow="Ready to Get Started?"
+            title="Let&apos;s Build Your Financial Success"
+            description="Whether you &apos re a business owner, entrepreneur, or an
+                individual, we &apos re ready to provide expert guidance that helps
+                you make confident financial decisions."
+            align="left"
+            showUnderline={false}
+            />
+            {/* <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--light-green)]">
                 Ready to Get Started?
               </p>
@@ -43,7 +55,7 @@ export default function AboutCTA() {
                 individual, we &apos re ready to provide expert guidance that helps
                 you make confident financial decisions.
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* CTA Button */}

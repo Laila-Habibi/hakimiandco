@@ -15,7 +15,7 @@ import {
 
 const services = [
   {
-    title: "Tax Services",
+    title: "Tax Solutions",
     description:
       "Tax planning, preparation and filing for individuals and businesses.",
     icon: FileText,

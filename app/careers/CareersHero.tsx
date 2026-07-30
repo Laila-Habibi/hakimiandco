@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function AboutHero() {
+
+
+export default function CareersHero() {
   return (
-    <section className="relative overflow-hidden bg-[#f7f4e9]">
+    
+
+      <section className="relative overflow-hidden bg-[#f7f4e9]">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
@@ -20,12 +24,12 @@ export default function AboutHero() {
 
       {/* Left botanical decoration */}
       <div className="pointer-events-none absolute -left-14 top-8 hidden opacity-20 sm:block">
-        <LeafIllustration />
+       
       </div>
 
       {/* Right botanical decoration */}
       <div className="pointer-events-none absolute -right-14 bottom-[-90px] hidden rotate-180 opacity-20 sm:block">
-        <LeafIllustration />
+        
       </div>
 
       {/* Hero content */}
@@ -43,72 +47,30 @@ export default function AboutHero() {
             <span className="text-[var(--light-green)]">/</span>
 
             <span className="text-[var(--primary-brown)]">
-              About Us
+              Careers
             </span>
           </div>
 
           <p className="animate-fade-up mt-8 text-sm font-bold uppercase tracking-[0.2em] text-[var(--light-green)]">
-            Get to Know Our Firm
+            Grow With Us
           </p>
 
           <h1 className="font-serif text-5xl font-semibold leading-[1.05] text-[#4a250e] sm:text-6xl lg:text-5xl animate-fade-up">
-            Built on Trust,
+             Careers
             <span className="block text-[var(--primary-green)]">
-              Guided by Experience
+               at Hakimi &amp; Co
             </span>
           </h1>
 
           <div className="animate-fade-up mx-auto mt-6 h-[3px] w-16 rounded-full bg-[var(--primary-golden)]" />
 
           <p className="animate-fade-up mt-6 max-w-lg text-base leading-7 text-[#4d433c]">
-            Learn more about our values, our experience, and the people
-            behind Hakimi &amp; Co.
+            We&apos;re always looking for talented, motivated and passionate
+              individuals to join our team and help our clients achieve their
+               financial goals.
           </p>
         </div>
       </div>
     </section>
-  );
-}
-
-function LeafIllustration() {
-  return (
-    <svg
-      width="220"
-      height="280"
-      viewBox="0 0 220 280"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M25 255C69 208 90 154 100 35"
-        stroke="#56742f"
-        strokeWidth="2"
-      />
-
-      <path
-        d="M92 70C62 58 42 41 34 16C66 16 88 37 92 70Z"
-        fill="#80ab7e"
-      />
-
-      <path
-        d="M97 104C128 91 151 70 163 43C129 43 105 67 97 104Z"
-        fill="#f5e088"
-      />
-
-      <path
-        d="M80 139C48 128 26 107 15 80C49 81 73 104 80 139Z"
-        fill="#80ab7e"
-      />
-
-      <path
-        d="M69 180C100 172 126 153 142 128C108 125 81 145 69 180Z"
-        fill="#f5e088"
-      />
-
-      <path
-        d="M48 215C18 205 2 188 0 164C28 166 47 184 48 215Z"
-        fill="#80ab7e"
-      />
-    </svg>
   );
 }

@@ -15,9 +15,7 @@ import {
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Industries", href: "/industries" },
-  { name: "Resources", href: "/resources" },
+  { name: "Careers", href: "/careers" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -51,63 +49,24 @@ function Header({
             </p>
           </div>
         </Link>
- 
-         <div className="hidden items-center gap-9 text-sm font-medium lg:flex">
-          <Link
-            href="/"
-            className="border-b-2 border-[var(--primary-green)] py-7 text-[#3d210f]"
-          >
-            Home
-          </Link>
-
-          <Link href="/about" className="transition hover:text-[var(--primary-green)]">
-            About
-          </Link>
-
-          <Link
-            href="/services"
-            className="flex items-center gap-1 transition hover:text-[var(--primary-green)]"
-          >
-            Services
-            <ChevronDown size={15} />
-          </Link>
-
-          <Link href="/industries" className="transition hover:text-[var(--primary-green)]">
-            Industries
-          </Link>
-
-          <Link href="/resources" className="transition hover:text-[var(--primary-green)]">
-            Resources
-          </Link>
-
-          <Link href="/contact" className="transition hover:text-[var(--primary-green)]">
-            Contact
-          </Link>
-        </div> 
-        {/* <div className="hidden items-center gap-9 text-sm font-medium lg:flex">
+        <div className="hidden items-center gap-9 text-sm font-medium lg:flex">
   {navItems.map((item) => (
     <Link
-      key={item.name}
+      key={item.href}
       href={item.href}
-      className={`
-        relative py-7 transition duration-300
-        hover:text-[var(--primary-green)]
-        ${
-          pathname === item.href
-            ? "border-b-2 border-[var(--primary-green)] text-[var(--primary-green)]"
-            : "text-[#3d210f]"
-        }
-      `}
+      className={`border-b-2 py-7 transition-all duration-300 ${
+        pathname === item.href
+          ? "border-[var(--primary-green)] text-[var(--primary-green)]"
+          : "border-transparent text-[#3d210f] hover:border-[var(--primary-green)] hover:text-[var(--primary-green)]"
+      }`}
     >
-      <span className="flex items-center gap-1">
-        {item.name}
-
-        {item.name === "Services" && <ChevronDown size={15} />}
-      </span>
+      {item.name}
     </Link>
   ))}
-</div> */}
-
+</div>
+ 
+  
+  
         <Link
           href="/contact"
           className="hidden items-center gap-3 rounded-lg bg-[#6e913d] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--dark-green)] lg:flex"

@@ -8,6 +8,9 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
+import SectionHeading from "../components/SectionHeading";
+
+
 
 const values = [
   {
@@ -103,45 +106,14 @@ export default function OurValuesSection() {
 
       <div className="relative mx-auto max-w-7xl">
         {/* Heading */}
-        <motion.div
-          className="text-center"
-          initial={{
-            opacity: 0,
-            y: 25,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-            amount: 0.5,
-          }}
-          transition={{
-            duration: 0.65,
-            ease: "easeOut",
-          }}
-        >
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--primary-green)]">
-            Our Values
-          </p>
+       
+         <SectionHeading
+         eyebrow="Our Values"
+         title="What We Stand For"
+         />
 
-          <h2 className="mt-4 font-serif text-4xl text-[var(--primary-brown)] sm:text-5xl">
-            What We Stand For
-          </h2>
+        
 
-          <motion.div
-            className="mx-auto mt-5 h-[3px] rounded-full bg-[#ffdb11]"
-            initial={{ width: 0 }}
-            whileInView={{ width: 56 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.7,
-              delay: 0.25,
-              ease: "easeOut",
-            }}
-          />
-        </motion.div>
 
         {/* Values */}
         <motion.div
@@ -203,7 +175,7 @@ export default function OurValuesSection() {
                   />
                 </motion.div>
 
-                <h3 className="mt-6 font-serif text-2xl text-[var(--primary-brown)]">
+                <h3 className="mt-6 font-serif text-xl font-semibold text-[var(--primary-brown)]">
                   {value.title}
                 </h3>
 
