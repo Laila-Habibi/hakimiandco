@@ -18,41 +18,52 @@ const services = [
     title: "Tax Solutions",
     description:
       "Tax planning, preparation and filing for individuals and businesses.",
+    href: "/services/tax-solutions",
     icon: FileText,
   },
   {
     title: "Assurance Services",
     description:
       "Audit, review and compilation services to ensure accuracy and transparency.",
+    href: "/services/assurance-services",
     icon: FileCheck2,
   },
   {
     title: "Payroll Solutions",
     description:
       "Simplify payroll processing and ensure accurate employee payments.",
+    href: "/services/payroll-solutions",
     icon: ShieldCheck,
   },
   {
     title: "Business Advisory",
     description:
       "Strategic guidance to help your business grow, improve and make better decisions.",
+    href: "/services/business-advisory",
     icon: TrendingUp,
   },
   {
     title: "AI Integration",
     description:
       "Integrate AI solutions to automate routine tasks and enhance financial analysis.",
+    href: "/services/ai-integration",
     icon: Cloud,
   },
 ];
 
 function Services() {
   return (
-    <section className="relative px-5 py-20 lg:px-10">
+    <section
+    id="services"
+     className="relative px-5 py-20 lg:px-10"
+    
+    >
       <div className="absolute right-0 top-36 hidden w-24 opacity-40 lg:block">
         {/* <BotanicalDecoration /> */}
       </div>
+      
 
+      
       <div className="mx-auto max-w-[1380px]">
         <SectionHeading
           eyebrow="Our Services"
@@ -86,7 +97,7 @@ function Services() {
                 </p>
 
                 <Link
-                  href="/services"
+                  href={service.href}
                   className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#6e913d]"
                 >
                   Learn More
@@ -100,6 +111,8 @@ function Services() {
           })}
         </div>
       </div>
+
+    
     </section>
   );
 }

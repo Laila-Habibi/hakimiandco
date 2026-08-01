@@ -106,7 +106,7 @@ function AnimatedCounter({
 
 function Statistics() {
   return (
-    <section className="bg-[#718c39] px-5 py-7 text-white">
+    <section className="bg-[var(--primary-green)] px-5 py-7 text-white">
       <div className="mx-auto grid max-w-[1320px] gap-7 sm:grid-cols-2 lg:grid-cols-4">
         {statistics.map((statistic, index) => {
           const Icon = statistic.icon;

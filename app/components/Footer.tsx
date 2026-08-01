@@ -36,7 +36,7 @@ const quickLinks = [
 
 function Footer() {
   return (
-    <footer className="bg-[#6e913d] px-5 pb-8 pt-14 text-white lg:px-10">
+    <footer className="bg-[var(--primary-green)] px-5 pb-8 pt-14 text-white lg:px-10">
       {/* bg-gradient-to-r from-[#542500] via-[#6a3105] to-[#3d1c00] */}
       <div className="mx-auto grid max-w-[1280px] gap-12 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr_1.2fr_1.25fr]">
         <div>

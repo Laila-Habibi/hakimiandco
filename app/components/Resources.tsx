@@ -53,7 +53,7 @@ function Resources() {
 
           <Link
   href="/services/ai-integration"
-  className="mt-8 inline-flex items-center gap-3 rounded-lg border border-[#80ab7e] px-5 py-3 text-sm font-semibold text-[#557b3f] transition hover:bg-[#80ab7e] hover:text-white"
+  className="mt-8 inline-flex items-center gap-3 rounded-lg border border-[#80ab7e] px-5 py-3 text-sm font-semibold text-[#557b3f] transition hover:bg-[var(--primary-green)] hover:text-white"
 >
   Learn More About AI Integration
   <ArrowRight size={17} />

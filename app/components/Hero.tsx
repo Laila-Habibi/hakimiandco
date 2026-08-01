@@ -27,7 +27,7 @@ function Hero() {
 
             <h1 className="font-serif text-5xl font-semibold leading-[1.05] text-[#4a250e] sm:text-6xl lg:text-5xl animate-fade-up">
               Reliable Financial Solutions for Your{" "}
-              <span className="text-[#6e913d]">Business</span>
+              <span className="text-[var(--primary-green)]">Business</span>
             </h1>
 
             <div className="mt-5 h-[3px] w-14 rounded-full bg-[#ffdb11]" />
@@ -42,15 +42,15 @@ function Hero() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row animate-fade-up">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 rounded-lg bg-[#6e913d] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[var(--dark-green)]"
+                className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--primary-green)] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[var(--dark-green)]"
               >
                 <CalendarDays size={18} />
                 Book a Consultation
               </Link>
 
               <Link
-                href="/services"
-                className="inline-flex items-center justify-center gap-3 rounded-lg border border-[#6e913d] px-6 py-4 text-sm font-semibold text-[#6e913d] transition hover:bg-[#6e913d] hover:text-white"
+                href="#services"
+                className="inline-flex items-center justify-center gap-3 rounded-lg border border-[var(--primary-green)] px-6 py-4 text-sm font-semibold text-[#6e913d] transition hover:bg-[#6e913d] hover:text-white"
               >
                 Explore Our Services
                 <ArrowRight size={18} />

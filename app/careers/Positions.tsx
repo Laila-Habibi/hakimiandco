@@ -15,12 +15,13 @@ import {
 
 const positions = [
   {
-    title: "Senior Accountant",
+    title: "Junior Accountant",
     location: "Toronto, ON",
     type: "Full-time",
     experience: "3–5 years",
     icon: BriefcaseBusiness,
     iconStyle: "bg-[#56742f] text-white",
+    link: "/careers/open-positions/junior-accountant",
   },
   {
     title: "Tax Associate",
@@ -29,6 +30,7 @@ const positions = [
     experience: "1–3 years",
     icon: BarChart3,
     iconStyle: "bg-[#edf2e6] text-[#56742f]",
+    link: "/careers/open-positions/junior-accountant",
   },
   {
     title: "Audit & Assurance Associate",
@@ -37,6 +39,7 @@ const positions = [
     experience: "1–3 years",
     icon: Award,
     iconStyle: "bg-[#f19f28] text-white",
+    link: "/careers/open-positions/junior-accountant",
   },
   {
     title: "Bookkeeping Specialist",
@@ -45,6 +48,7 @@ const positions = [
     experience: "1–2 years",
     icon: BriefcaseBusiness,
     iconStyle: "bg-[#56742f] text-white",
+    link: "/careers/open-positions/junior-accountant",
   },
 ];
 
@@ -71,7 +75,7 @@ export default function OpenPositionsSection(){
                 return (
                   <Link
                     key={position.title}
-                    href="/contact"
+                    href={position.link}
                     className="group flex flex-col gap-5 rounded-xl border border-[#854d1b]/10 bg-white px-5 py-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#80ab7e]/40 hover:shadow-lg sm:flex-row sm:items-center"
                   >
                     <div

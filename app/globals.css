@@ -3,14 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-green: #6e913d;
+  --primary-green:#56742F;
   --primary-orange: #e7650d;
   --light-green: #80ab7e;
   --primary-brown: #4a250e;
-  --primary-golden: #ffdb11;
+  --primary-golden: #e6c200;
   --dark-green: #56742F;
 
 }
+/* #6e913d; */
+/* #ffdb11; */
 
 @theme inline {
   --color-background: var(--background);
@@ -79,3 +81,6 @@ body {
   animation: slowRotate 35s linear infinite;
 }
 
+html {
+  scroll-behavior: smooth;
+}
