@@ -175,13 +175,15 @@ function Header({
         </div>
 
         {/* Consultation button */}
-        <Link
-          href="/contact"
-          className="hidden items-center gap-3 rounded-lg bg-[#6e913d] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--dark-green)] lg:flex"
-        >
-          Book a Consultation
-          <CalendarDays size={17} />
-        </Link>
+       <Link
+  href="https://calendar.app.google/eHYgEx7mxkgmNMoi9"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-3 rounded-lg bg-[var(--primary-green)] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[var(--dark-green)]"
+>
+  Book a Consultation
+  <CalendarDays size={18} />
+</Link>
 
         {/* Mobile menu button */}
         <button

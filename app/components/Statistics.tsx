@@ -15,7 +15,7 @@ import {
 
 const statistics = [
   {
-    value: 10,
+    value: 15,
     suffix: "+",
     label: "Years of Experience",
     icon: BriefcaseBusiness,
