@@ -18,7 +18,7 @@ const statistics = [
   },
   {
     icon: BriefcaseBusiness,
-    value: 25,
+    value: 15,
     suffix: "+",
     title: "Years of Experience",
     description:
