@@ -160,7 +160,7 @@ export default function JuniorAccountantApplicationPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f8f6ef] text-[#554b44]">
+    <main className="min-h-screen bg-[var(--surface-muted)] text-[var(--text-body)]">
       <ApplicationHero />
 
       <section className="px-5 py-14 sm:px-8 lg:px-10 lg:py-20">
@@ -442,7 +442,7 @@ export default function JuniorAccountantApplicationPage() {
               </div>
             </FormSection>
 
-            <div className="rounded-2xl border border-[#80ab7e]/20 bg-white p-6 shadow-[0_12px_35px_rgba(86,116,47,0.06)]">
+            <div className="rounded-2xl border border-[var(--light-green)]/20 bg-[var(--surface)] p-6 shadow-[0_12px_35px_color-mix(in_srgb,var(--dark-green)_6%,transparent)]">
               <label className="flex cursor-pointer items-start gap-4">
                 <input
                   type="checkbox"
@@ -450,10 +450,10 @@ export default function JuniorAccountantApplicationPage() {
                   onChange={(event) =>
                     updateField("declaration", event.target.checked)
                   }
-                  className="mt-1 h-5 w-5 shrink-0 rounded border-[#80ab7e] accent-[var(--primary-green)]"
+                  className="mt-1 h-5 w-5 shrink-0 rounded border-[var(--light-green)] accent-[var(--primary-green)]"
                 />
 
-                <span className="text-sm leading-7 text-[#5c5048]">
+                <span className="text-sm leading-7 text-[var(--text-body)]">
                   I certify that the information provided in this application
                   is complete and accurate. I understand that false or
                   misleading information may result in the rejection of my
@@ -465,7 +465,7 @@ export default function JuniorAccountantApplicationPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group inline-flex w-full items-center justify-center gap-3 rounded-lg bg-[var(--primary-green)] px-8 py-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-[var(--dark-green)] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+              className="group inline-flex w-full items-center justify-center gap-3 rounded-lg bg-[var(--primary-green)] px-8 py-4 text-sm font-semibold text-[var(--on-dark)] transition duration-300 hover:-translate-y-1 hover:bg-[var(--dark-green)] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
             >
               {isSubmitting ? "Submitting Application..." : "Submit Application"}
 
@@ -487,8 +487,8 @@ export default function JuniorAccountantApplicationPage() {
 
 function ApplicationHero() {
   return (
-    <section className="relative overflow-hidden border-b border-[#80ab7e]/20 bg-[#f8f6ef] px-5 py-14 sm:px-8 lg:px-10 lg:py-16">
-      <div className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[#80ab7e]/10 blur-3xl" />
+    <section className="relative overflow-hidden border-b border-[var(--light-green)]/20 bg-[var(--surface-muted)] px-5 py-14 sm:px-8 lg:px-10 lg:py-16">
+      <div className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[var(--light-green)]/10 blur-3xl" />
 
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-wrap items-center gap-2 text-sm font-medium">
@@ -548,9 +548,9 @@ function ApplicationHero() {
             Apply for Junior Accountant
           </h1>
 
-          <div className="mt-6 h-[3px] w-16 rounded-full bg-[var(--primary-golden)]" />
+          <div className="mt-6 h-[3px] w-16 rounded-full metallic-gold" />
 
-          <p className="mt-7 max-w-2xl text-base leading-8 text-[#5c5048]">
+          <p className="mt-7 max-w-2xl text-base leading-8 text-[var(--text-body)]">
             Complete the form below to apply for the Junior Accountant
             position. Our recruitment team will review your application and
             contact selected candidates.
@@ -573,7 +573,7 @@ function FormSection({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-2xl border border-[#80ab7e]/20 bg-white p-6 shadow-[0_12px_35px_rgba(86,116,47,0.06)] sm:p-8">
+    <section className="rounded-2xl border border-[var(--light-green)]/20 bg-[var(--surface)] p-6 shadow-[0_12px_35px_color-mix(in_srgb,var(--dark-green)_6%,transparent)] sm:p-8">
       <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--primary-green)]">
         {eyebrow}
       </p>
@@ -582,9 +582,9 @@ function FormSection({
         {title}
       </h2>
 
-      <div className="mt-4 h-[3px] w-12 rounded-full bg-[var(--primary-golden)]" />
+      <div className="mt-4 h-[3px] w-12 rounded-full metallic-gold" />
 
-      <p className="mt-4 text-sm leading-7 text-[#66574d]">{description}</p>
+      <p className="mt-4 text-sm leading-7 text-[var(--text-muted)]">{description}</p>
 
       <div className="mt-8">{children}</div>
     </section>
@@ -614,7 +614,7 @@ function FormInput({
     <div>
       <label
         htmlFor={id}
-        className="mb-2 block text-sm font-semibold text-[#3d2c22]"
+        className="mb-2 block text-sm font-semibold text-[var(--primary-brown)]"
       >
         {label}
         {required && (
@@ -625,7 +625,7 @@ function FormInput({
       <div className="relative">
         <Icon
           size={18}
-          className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#789066]"
+          className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[var(--light-green)]"
         />
 
         <input
@@ -636,7 +636,7 @@ function FormInput({
           onChange={(event) => onChange(event.target.value)}
           required={required}
           placeholder={placeholder}
-          className="h-14 w-full rounded-lg border border-[#854d1b]/15 bg-white pl-12 pr-4 text-sm text-[#3d210f] outline-none transition placeholder:text-[#948a82] focus:border-[#80ab7e] focus:ring-2 focus:ring-[#80ab7e]/15"
+          className="h-14 w-full rounded-lg border border-[var(--primary-brown)]/15 bg-[var(--surface)] pl-12 pr-4 text-sm text-[var(--primary-brown)] outline-none transition placeholder:text-[var(--text-placeholder)] focus:border-[var(--light-green)] focus:ring-2 focus:ring-[var(--light-green)]/15"
         />
       </div>
     </div>
@@ -662,7 +662,7 @@ function FormSelect({
     <div>
       <label
         htmlFor={id}
-        className="mb-2 block text-sm font-semibold text-[#3d2c22]"
+        className="mb-2 block text-sm font-semibold text-[var(--primary-brown)]"
       >
         {label}
         {required && (
@@ -677,7 +677,7 @@ function FormSelect({
           value={value}
           onChange={(event) => onChange(event.target.value)}
           required={required}
-          className="h-14 w-full appearance-none rounded-lg border border-[#854d1b]/15 bg-white px-4 pr-11 text-sm text-[#3d210f] outline-none transition focus:border-[#80ab7e] focus:ring-2 focus:ring-[#80ab7e]/15"
+          className="h-14 w-full appearance-none rounded-lg border border-[var(--primary-brown)]/15 bg-[var(--surface)] px-4 pr-11 text-sm text-[var(--primary-brown)] outline-none transition focus:border-[var(--light-green)] focus:ring-2 focus:ring-[var(--light-green)]/15"
         >
           <option value="">Select an option</option>
 
@@ -690,7 +690,7 @@ function FormSelect({
 
         <ChevronDown
           size={18}
-          className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#789066]"
+          className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[var(--light-green)]"
         />
       </div>
     </div>
@@ -709,8 +709,8 @@ function RadioGroup({
   onChange: (value: string) => void;
 }) {
   return (
-    <fieldset className="rounded-xl border border-[#80ab7e]/20 bg-[#fbfaf6] p-5">
-      <legend className="px-2 text-sm font-semibold leading-6 text-[#3d2c22]">
+    <fieldset className="rounded-xl border border-[var(--light-green)]/20 bg-[var(--surface-cream)] p-5">
+      <legend className="px-2 text-sm font-semibold leading-6 text-[var(--primary-brown)]">
         {legend}
       </legend>
 
@@ -755,8 +755,8 @@ function FileUpload({
   accept?: string;
 }) {
   return (
-    <div className="rounded-xl border border-dashed border-[#80ab7e]/50 bg-[#fbfaf6] p-5 text-center">
-      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#80ab7e]/12 text-[var(--primary-green)]">
+    <div className="rounded-xl border border-dashed border-[var(--light-green)]/50 bg-[var(--surface-cream)] p-5 text-center">
+      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[var(--light-green)]/12 text-[var(--primary-green)]">
         <Upload size={24} />
       </div>
 
@@ -770,7 +770,7 @@ function FileUpload({
         )}
       </label>
 
-      <p className="mt-2 text-xs leading-5 text-[#756c65]">{description}</p>
+      <p className="mt-2 text-xs leading-5 text-[var(--text-muted)]">{description}</p>
 
       <input
         id={id}
@@ -783,7 +783,7 @@ function FileUpload({
 
       <label
         htmlFor={id}
-        className="mt-4 inline-flex cursor-pointer items-center justify-center rounded-md border border-[var(--primary-green)] px-4 py-2 text-xs font-semibold text-[var(--primary-green)] transition hover:bg-[var(--primary-green)] hover:text-white"
+        className="mt-4 inline-flex cursor-pointer items-center justify-center rounded-md border border-[var(--primary-green)] px-4 py-2 text-xs font-semibold text-[var(--primary-green)] transition hover:bg-[var(--primary-green)] hover:text-[var(--on-dark)]"
       >
         Choose File
       </label>
@@ -816,7 +816,7 @@ function FormTextarea({
     <div>
       <label
         htmlFor={id}
-        className="mb-2 block text-sm font-semibold text-[#3d2c22]"
+        className="mb-2 block text-sm font-semibold text-[var(--primary-brown)]"
       >
         {label}
         {required && (
@@ -832,7 +832,7 @@ function FormTextarea({
         required={required}
         rows={6}
         placeholder={placeholder}
-        className="w-full resize-none rounded-lg border border-[#854d1b]/15 bg-white px-4 py-4 text-sm leading-7 text-[#3d210f] outline-none transition placeholder:text-[#948a82] focus:border-[#80ab7e] focus:ring-2 focus:ring-[#80ab7e]/15"
+        className="w-full resize-none rounded-lg border border-[var(--primary-brown)]/15 bg-[var(--surface)] px-4 py-4 text-sm leading-7 text-[var(--primary-brown)] outline-none transition placeholder:text-[var(--text-placeholder)] focus:border-[var(--light-green)] focus:ring-2 focus:ring-[var(--light-green)]/15"
       />
     </div>
   );
@@ -841,7 +841,7 @@ function FormTextarea({
 function ApplicationSidebar() {
   return (
     <aside className="space-y-6 lg:sticky lg:top-24">
-      <div className="rounded-2xl border border-[#80ab7e]/20 bg-white p-7 shadow-[0_12px_35px_rgba(86,116,47,0.06)]">
+      <div className="rounded-2xl border border-[var(--light-green)]/20 bg-[var(--surface)] p-7 shadow-[0_12px_35px_color-mix(in_srgb,var(--dark-green)_6%,transparent)]">
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--primary-green)]">
           Position Summary
         </p>
@@ -850,7 +850,7 @@ function ApplicationSidebar() {
           Junior Accountant
         </h2>
 
-        <div className="mt-6 space-y-5 border-t border-[#854d1b]/12 pt-6">
+        <div className="mt-6 space-y-5 border-t border-[var(--primary-brown)]/12 pt-6">
           <SidebarDetail
             icon={BriefcaseBusiness}
             label="Department"
@@ -885,20 +885,20 @@ function ApplicationSidebar() {
         </Link>
       </div>
 
-      <div className="rounded-2xl bg-[var(--primary-green)] p-7 text-white">
+      <div className="rounded-2xl bg-[var(--primary-green)] p-7 text-[var(--on-dark)]">
         <Mail size={30} strokeWidth={1.5} />
 
         <h2 className="mt-5 font-serif text-2xl font-semibold">
           Questions about applying?
         </h2>
 
-        <p className="mt-3 text-sm leading-7 text-white/80">
+        <p className="mt-3 text-sm leading-7 text-[var(--on-dark)]/80">
           Contact our recruitment team for help with your application.
         </p>
 
         <a
           href="mailto:careers@hakimiandco.ca"
-          className="mt-5 inline-block text-sm font-semibold text-[var(--primary-golden)]"
+          className="mt-5 inline-block text-sm font-semibold metallic-gold-text"
         >
           careers@hakimiandco.ca
         </a>
@@ -924,8 +924,8 @@ function SidebarDetail({
       />
 
       <div>
-        <p className="text-xs text-[#756c65]">{label}</p>
-        <p className="mt-1 text-sm font-medium text-[#3d2c22]">{value}</p>
+        <p className="text-xs text-[var(--text-muted)]">{label}</p>
+        <p className="mt-1 text-sm font-medium text-[var(--primary-brown)]">{value}</p>
       </div>
     </div>
   );
@@ -933,9 +933,9 @@ function SidebarDetail({
 
 function ApplicationSuccess() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#f8f6ef] px-5 py-20">
-      <div className="w-full max-w-2xl rounded-3xl border border-[#80ab7e]/20 bg-white px-7 py-14 text-center shadow-[0_18px_50px_rgba(86,116,47,0.10)] sm:px-12">
-        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[var(--primary-green)] text-white">
+    <main className="flex min-h-screen items-center justify-center bg-[var(--surface-muted)] px-5 py-20">
+      <div className="w-full max-w-2xl rounded-3xl border border-[var(--light-green)]/20 bg-[var(--surface)] px-7 py-14 text-center shadow-[0_18px_50px_color-mix(in_srgb,var(--dark-green)_10%,transparent)] sm:px-12">
+        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[var(--primary-green)] text-[var(--on-dark)]">
           <Check size={38} strokeWidth={2} />
         </div>
 
@@ -947,7 +947,7 @@ function ApplicationSuccess() {
           Thank You for Applying
         </h1>
 
-        <p className="mx-auto mt-6 max-w-lg text-sm leading-7 text-[#5c5048]">
+        <p className="mx-auto mt-6 max-w-lg text-sm leading-7 text-[var(--text-body)]">
           Your application for the Junior Accountant role has been received.
           Our recruitment team will review your submission and contact you if
           your experience matches the position.
@@ -956,7 +956,7 @@ function ApplicationSuccess() {
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
           <Link
             href="/careers/open-positions"
-            className="inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--primary-green)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--dark-green)]"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-[var(--primary-green)] px-6 py-3 text-sm font-semibold text-[var(--on-dark)] transition hover:bg-[var(--dark-green)]"
           >
             View Other Positions
             <ArrowRight size={17} />
@@ -964,7 +964,7 @@ function ApplicationSuccess() {
 
           <Link
             href="/"
-            className="inline-flex items-center justify-center rounded-lg border border-[var(--primary-green)] px-6 py-3 text-sm font-semibold text-[var(--primary-green)] transition hover:bg-[var(--primary-green)] hover:text-white"
+            className="inline-flex items-center justify-center rounded-lg border border-[var(--primary-green)] px-6 py-3 text-sm font-semibold text-[var(--primary-green)] transition hover:bg-[var(--primary-green)] hover:text-[var(--on-dark)]"
           >
             Return Home
           </Link>

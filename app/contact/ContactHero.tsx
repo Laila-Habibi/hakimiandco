@@ -27,7 +27,7 @@ const highlights = [
 export default function ContactHero() {
   return (
   
-     <section className="relative overflow-hidden bg-[#f7f4e9]">
+     <section className="relative overflow-hidden bg-[var(--surface-muted)]">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
@@ -39,7 +39,7 @@ export default function ContactHero() {
           className="object-cover opacity-20"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#fffdf7] via-[#fffdf7]/90 to-[#80ab7e]/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--surface-cream)] via-[var(--surface-cream)]/90 to-[var(--light-green)]/25" />
       </div>
 
       {/* Left botanical decoration */}
@@ -75,16 +75,16 @@ export default function ContactHero() {
               We&apos;d Love to Hear From You
           </p>
 
-          <h1 className="font-serif text-5xl font-semibold leading-[1.05] text-[#4a250e] sm:text-6xl lg:text-5xl animate-fade-up">
+          <h1 className="font-serif text-5xl font-semibold leading-[1.05] text-[var(--primary-brown)] sm:text-6xl lg:text-5xl animate-fade-up">
              Let&apos;s Start a
             <span className="block text-[var(--primary-green)]">
               Conversation
             </span>
           </h1>
 
-          <div className="animate-fade-up mx-auto mt-6 h-[3px] w-16 rounded-full bg-[var(--primary-golden)]" />
+          <div className="animate-fade-up mx-auto mt-6 h-[3px] w-16 rounded-full metallic-gold" />
 
-          <p className="animate-fade-up mt-6 max-w-lg text-base leading-7 text-[#4d433c]">
+          <p className="animate-fade-up mt-6 max-w-lg text-base leading-7 text-[var(--text-body)]">
            Whether you have a question, need accounting guidance, or want to
              book a consultation, our team is ready to help you with expert
              advice and personalized service.

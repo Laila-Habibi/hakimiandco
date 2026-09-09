@@ -92,7 +92,7 @@ export default function OurValuesSection() {
 
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-24 bottom-10 h-64 w-64 rounded-full bg-[#ffdb11]/10 blur-3xl"
+        className="pointer-events-none absolute -right-24 bottom-10 h-64 w-64 rounded-full bg-[var(--primary-golden)]/10 blur-3xl"
         animate={{
           x: [8, -8, 8],
           y: [0, -6, 0],
@@ -140,15 +140,15 @@ export default function OurValuesSection() {
                   duration: 0.3,
                   ease: "easeOut",
                 }}
-                className={`group relative rounded-2xl px-5 py-7 text-center transition-colors duration-300 hover:bg-[#fffaf0] ${
+                className={`group relative rounded-2xl px-5 py-7 text-center transition-colors duration-300 hover:bg-[var(--surface-warm)] ${
                   index !== values.length - 1
-                    ? "lg:rounded-none lg:border-r lg:border-[#f19f28]/45"
+                    ? "lg:rounded-none lg:border-r lg:border-[var(--primary-orange)]/45"
                     : ""
                 }`}
               >
                 {/* Icon circle */}
                 <motion.div
-                  className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[#80ab7e]/12 transition-colors duration-300 group-hover:bg-[#80ab7e]/20"
+                  className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[var(--light-green)]/12 transition-colors duration-300 group-hover:bg-[var(--light-green)]/20"
                   variants={{
                     hidden: {
                       scale: 0,
@@ -181,7 +181,7 @@ export default function OurValuesSection() {
 
                 {/* Animated gold line */}
                 <motion.div
-                  className="mx-auto mt-3 h-[2px] bg-[#ffdb11]"
+                  className="mx-auto mt-3 h-[2px] metallic-gold"
                   initial={{ width: 0 }}
                   whileInView={{ width: 32 }}
                   viewport={{ once: true }}
@@ -195,7 +195,7 @@ export default function OurValuesSection() {
                   }}
                 />
 
-                <p className="mx-auto mt-4 max-w-[210px] text-sm leading-7 text-[#66574d]">
+                <p className="mx-auto mt-4 max-w-[210px] text-sm leading-7 text-[var(--text-muted)]">
                   {value.description}
                 </p>
               </motion.article>

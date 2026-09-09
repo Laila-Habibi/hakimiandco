@@ -24,7 +24,7 @@ function Resources() {
     <section className="relative px-5 py-20 lg:px-10">
       <div className="mx-auto grid max-w-[1320px] items-center gap-12 lg:grid-cols-[0.75fr_1.25fr]">
         <div>
-        <p className="text-sm font-bold uppercase tracking-[0.17em] text-[#80ab7e]">
+        <p className="text-sm font-bold uppercase tracking-[0.17em] text-[var(--light-green)]">
   AI Integration
 </p>
 
@@ -34,9 +34,9 @@ function Resources() {
   with AI
 </h2>
 
-<div className="mt-4 h-[3px] w-14 rounded-full bg-[#ffdb11]" />
+<div className="mt-4 h-[3px] w-14 rounded-full metallic-gold" />
 
-<p className="mt-6 max-w-lg text-base leading-7 text-[#554b44]">
+<p className="mt-6 max-w-lg text-base leading-7 text-[var(--text-body)]">
   Harness the power of artificial intelligence to automate workflows,
   streamline operations, and gain valuable insights that help your business
   grow faster and smarter.
@@ -45,7 +45,7 @@ function Resources() {
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
             {resources.map((feature) => (
               <div key={feature} className="flex items-center gap-2 text-sm">
-                <Check size={18} strokeWidth={3} className="text-[#6e913d]" />
+                <Check size={18} strokeWidth={3} className="text-[var(--primary-green)]" />
                 <span>{feature}</span>
               </div>
             ))}
@@ -53,7 +53,7 @@ function Resources() {
 
           <Link
   href="/services/ai-integration"
-  className="mt-8 inline-flex items-center gap-3 rounded-lg border border-[#80ab7e] px-5 py-3 text-sm font-semibold text-[#557b3f] transition hover:bg-[var(--primary-green)] hover:text-white"
+  className="mt-8 inline-flex items-center gap-3 rounded-lg border border-[var(--light-green)] px-5 py-3 text-sm font-semibold text-[var(--primary-green)] transition hover:bg-[var(--primary-green)] hover:text-[var(--on-dark)]"
 >
   Learn More About AI Integration
   <ArrowRight size={17} />
@@ -71,9 +71,9 @@ function Resources() {
       </div>
 
      <div className="mx-auto mt-5 flex max-w-xl flex-wrap items-center justify-center gap-8 text-lg font-bold">
-  <span className="text-[#10a37f]">OpenAI</span>
-  <span className="text-[#0052cc]">Power Automate</span>
-  <span className="text-[#2563eb]">Azure AI</span>
+  <span className="text-[var(--brand-openai)]">OpenAI</span>
+  <span className="text-[var(--brand-power-automate)]">Power Automate</span>
+  <span className="text-[var(--brand-azure)]">Azure AI</span>
 </div>
     </section>
   );

@@ -1,6 +1,3 @@
-
-
-
 import Link from "next/link";
 
 import {
@@ -93,13 +90,17 @@ const socialLinks = [
 
 function Footer() {
   return (
-    <footer className="bg-[var(--primary-green)] px-5 pb-8 pt-14 text-white lg:px-10">
+    <footer className="bg-[var(--primary-green)] px-5 pb-8 pt-14 text-[var(--on-dark)] lg:px-10">
       <div className="mx-auto grid max-w-[1280px] gap-12 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr_1.2fr_1.25fr]">
         {/* Brand */}
         <div>
           <Link href="/" className="flex w-fit items-center gap-3">
-            <div className="font-serif text-4xl font-semibold text-[#f5e088]">
-              H&amp;C
+            <div className="relative shrink-0 font-serif text-4xl font-semibold leading-none text-[var(--primary-golden)]">
+              <span className="metallic-gold-text">H</span>
+              <span className="absolute bottom-0 left-4 metallic-gold-text">
+                &amp;
+              </span>
+              <span className="ml-1 metallic-gold-text">C</span>
             </div>
 
             <div>
@@ -113,7 +114,7 @@ function Footer() {
             </div>
           </Link>
 
-          <p className="mt-5 max-w-xs text-sm leading-6 text-white/75">
+          <p className="mt-5 max-w-xs text-sm leading-6 text-[var(--on-dark)]/75">
             Professional. Reliable. Dedicated to your financial success.
           </p>
 
@@ -132,7 +133,7 @@ function Footer() {
                       ? "noopener noreferrer"
                       : undefined
                   }
-                  className="flex h-9 w-9 items-center justify-center rounded-md border border-white/40 transition duration-300 hover:-translate-y-1 hover:border-[#e6c200] hover:bg-[#e6c200] hover:text-[#3d210f]"
+                  className="flex h-9 w-9 items-center justify-center rounded-md border border-[var(--surface)]/40 transition duration-300 hover:-translate-y-1 hover:border-[var(--primary-golden)] hover:bg-[var(--primary-golden)] hover:text-[var(--primary-brown)]"
                 >
                   <Icon size={17} />
                 </Link>
@@ -153,15 +154,15 @@ function Footer() {
 
         {/* Contact */}
         <div>
-          <h3 className="font-semibold text-[#f5e088]">
+          <h3 className="font-semibold w-fit metallic-gold-text">
             Contact Us
           </h3>
 
-          <div className="mt-5 space-y-4 text-sm text-white/80">
+          <div className="mt-5 space-y-4 text-sm text-[var(--on-dark)]/80">
             <FooterContact
               icon={Phone}
-              text="(905) 123-4567"
-              href="tel:+19051234567"
+              text="(647) 226 2492"
+              href="tel:+16472262492"
             />
 
             <FooterContact
@@ -172,28 +173,28 @@ function Footer() {
 
             <FooterContact
               icon={MapPin}
-              text="123 Business Rd, Suite 200, Vaughan, ON"
+              text="172 Britannia Avenue West"
               href="https://maps.google.com"
             />
 
             <FooterContact
               icon={CalendarDays}
-              text="Mon – Fri: 9:00 AM – 5:00 PM"
+              text="Tue – Thursday: 9:00 AM – 5:00 PM"
             />
           </div>
         </div>
 
         {/* Newsletter */}
         <div>
-          <h3 className="font-semibold text-[#f5e088]">
+          <h3 className="font-semibold w-fit metallic-gold-text">
             Newsletter
           </h3>
 
-          <p className="mt-5 text-sm leading-6 text-white/75">
+          <p className="mt-5 text-sm leading-6 text-[var(--on-dark)]/75">
             Stay updated with the latest financial tips and insights.
           </p>
 
-          <form className="mt-5 flex overflow-hidden rounded-md bg-white">
+          <form className="mt-5 flex overflow-hidden rounded-md bg-[var(--surface)]">
             <label htmlFor="footer-email" className="sr-only">
               Email address
             </label>
@@ -204,13 +205,13 @@ function Footer() {
               type="email"
               required
               placeholder="Your email address"
-              className="min-w-0 flex-1 px-4 py-3 text-sm text-[#3d210f] outline-none placeholder:text-[#8b817a]"
+              className="min-w-0 flex-1 px-4 py-3 text-sm text-[var(--primary-brown)] outline-none placeholder:text-[var(--text-placeholder)]"
             />
 
             <button
               type="submit"
               aria-label="Subscribe"
-              className="flex w-12 items-center justify-center bg-[#e6c200] text-[#3d210f] transition hover:bg-[#d4b000]"
+              className="flex w-12 items-center justify-center bg-[var(--primary-golden)] text-[var(--primary-brown)] transition hover:bg-[var(--gold-shadow)]"
             >
               <Send size={17} />
             </button>
@@ -219,7 +220,7 @@ function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="mx-auto mt-12 flex max-w-[1280px] flex-col justify-between gap-4 border-t border-white/15 pt-6 text-xs text-white/65 sm:flex-row">
+      <div className="mx-auto mt-12 flex max-w-[1280px] flex-col justify-between gap-4 border-t border-[var(--surface)]/15 pt-6 text-xs text-[var(--on-dark)]/65 sm:flex-row">
         <p>
           © 2026 Hakimi &amp; Co Accounting. All Rights Reserved.
         </p>
@@ -227,14 +228,14 @@ function Footer() {
         <div className="flex gap-6">
           <Link
             href="/privacy"
-            className="transition hover:text-[#f5e088]"
+            className="transition hover:metallic-gold-text"
           >
             Privacy Policy
           </Link>
 
           <Link
             href="/terms"
-            className="transition hover:text-[#f5e088]"
+            className="transition hover:metallic-gold-text"
           >
             Terms of Service
           </Link>
@@ -258,16 +259,16 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <h3 className="font-semibold text-[#f5e088]">
+      <h3 className="font-semibold w-fit metallic-gold-text">
         {title}
       </h3>
 
-      <div className="mt-5 flex flex-col gap-3 text-sm text-white/75">
+      <div className="mt-5 flex flex-col gap-3 text-sm text-[var(--on-dark)]/75">
         {links.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="w-fit transition duration-300 hover:translate-x-1 hover:text-[#f5e088]"
+            className="w-fit transition duration-300 hover:translate-x-1 hover:metallic-gold-text"
           >
             {link.name}
           </Link>
@@ -290,7 +291,7 @@ function FooterContact({
     <>
       <Icon
         size={17}
-        className="mt-0.5 shrink-0 text-[#f5e088]"
+        className="mt-0.5 shrink-0 text-[var(--primary-golden)]"
       />
 
       <span className="leading-6">{text}</span>
@@ -307,7 +308,7 @@ function FooterContact({
             ? "noopener noreferrer"
             : undefined
         }
-        className="flex gap-3 transition hover:text-[#f5e088]"
+        className="flex gap-3 transition hover:metallic-gold-text"
       >
         {content}
       </Link>

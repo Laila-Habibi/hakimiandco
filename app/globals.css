@@ -1,18 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary-green:#3a4f1e;
-  --primary-orange: #e7650d;
+  /* Brand colors: edit these to recolor the site. */
+  --primary-green: #3a4f1e;
+  --dark-green: #56742f;
   --light-green: #80ab7e;
   --primary-brown: #4a250e;
-  --primary-golden: #f8d409;
-  --dark-green: #56742F;
+  --primary-orange: #e7650d;
+  --primary-golden: #e2bb45;
 
+  /* Shared neutrals and surfaces, derived from the brand palette. */
+  --surface: #ffffff;
+  --ink: #171717;
+  --background: var(--surface);
+  --foreground: var(--text-body);
+  --on-dark: var(--surface);
+  --text-body: color-mix(in srgb, var(--primary-brown) 75%, var(--surface));
+  --text-muted: color-mix(in srgb, var(--primary-brown) 65%, var(--surface));
+  --text-placeholder: color-mix(in srgb, var(--primary-brown) 52%, var(--surface));
+  --surface-cream: color-mix(in srgb, var(--primary-golden) 5%, var(--surface));
+  --surface-warm: color-mix(in srgb, var(--primary-golden) 10%, var(--surface));
+  --surface-muted: color-mix(in srgb, var(--primary-brown) 5%, var(--surface));
+  --surface-green: color-mix(in srgb, var(--light-green) 12%, var(--surface));
+  --overlay-green: color-mix(in srgb, var(--primary-green) 80%, var(--ink));
+
+  /* Metallic highlights follow the primary gold automatically. */
+  --gold-shadow: color-mix(in srgb, var(--primary-golden) 75%, var(--primary-brown));
+  --gold-highlight: color-mix(in srgb, var(--primary-golden) 35%, var(--surface));
+  --gold-mid: color-mix(in srgb, var(--primary-golden) 88%, var(--primary-brown));
+  --gold-light: color-mix(in srgb, var(--primary-golden) 65%, var(--surface));
+  --metallic-gold-gradient: linear-gradient(110deg, var(--gold-shadow) 0%, var(--primary-golden) 25%, var(--gold-highlight) 48%, var(--gold-mid) 72%, var(--gold-light) 100%);
+
+  /* External brand names retain their own centrally managed colors. */
+  --brand-openai: #10a37f;
+  --brand-power-automate: #0052cc;
+  --brand-azure: #2563eb;
+  --dark-background: #0a0a0a;
+  --dark-foreground: #ededed;
 }
-/* #6e913d; */
-/* #ffdb11; */
+/* Gold accents use the shared metallic palette. */
 
 @theme inline {
   --color-background: var(--background);
@@ -23,8 +49,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--dark-background);
+    --foreground: var(--dark-foreground);
   }
 }
 
@@ -83,4 +109,23 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+@utility metallic-gold {
+  background-color: var(--primary-golden);
+  background-image: var(--metallic-gold-gradient);
+}
+
+/* Keep currentColor gold for inline icons; clip the shine to letterforms. */
+@utility metallic-gold-text {
+  color: var(--primary-golden);
+  @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+    background-image: var(--metallic-gold-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @media (forced-colors: active) {
+    background-image: none;
+    -webkit-text-fill-color: currentColor;
+  }
 }

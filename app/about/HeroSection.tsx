@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AboutHero() {
   return (
-    <section className="relative overflow-hidden bg-[#f7f4e9]">
+    <section className="relative overflow-hidden bg-[var(--surface-muted)]">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
@@ -15,7 +15,7 @@ export default function AboutHero() {
           className="object-cover opacity-20"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#fffdf7] via-[#fffdf7]/90 to-[#80ab7e]/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--surface-cream)] via-[var(--surface-cream)]/90 to-[var(--light-green)]/25" />
       </div>
 
       {/* Left botanical decoration */}
@@ -51,16 +51,16 @@ export default function AboutHero() {
             Get to Know Our Firm
           </p>
 
-          <h1 className="font-serif text-5xl font-semibold leading-[1.05] text-[#4a250e] sm:text-6xl lg:text-5xl animate-fade-up">
+          <h1 className="font-serif text-5xl font-semibold leading-[1.05] text-[var(--primary-brown)] sm:text-6xl lg:text-5xl animate-fade-up">
             Built on Trust,
             <span className="block text-[var(--primary-green)]">
               Guided by Experience
             </span>
           </h1>
 
-          <div className="animate-fade-up mx-auto mt-6 h-[3px] w-16 rounded-full bg-[var(--primary-golden)]" />
+          <div className="animate-fade-up mx-auto mt-6 h-[3px] w-16 rounded-full metallic-gold" />
 
-          <p className="animate-fade-up mt-6 max-w-lg text-base leading-7 text-[#4d433c]">
+          <p className="animate-fade-up mt-6 max-w-lg text-base leading-7 text-[var(--text-body)]">
             Learn more about our values, our experience, and the people
             behind Hakimi &amp; Co.
           </p>
@@ -81,33 +81,33 @@ function LeafIllustration() {
     >
       <path
         d="M25 255C69 208 90 154 100 35"
-        stroke="#56742f"
+        stroke="var(--dark-green)"
         strokeWidth="2"
       />
 
       <path
         d="M92 70C62 58 42 41 34 16C66 16 88 37 92 70Z"
-        fill="#80ab7e"
+        fill="var(--light-green)"
       />
 
       <path
         d="M97 104C128 91 151 70 163 43C129 43 105 67 97 104Z"
-        fill="#f5e088"
+        fill="var(--gold-highlight)"
       />
 
       <path
         d="M80 139C48 128 26 107 15 80C49 81 73 104 80 139Z"
-        fill="#80ab7e"
+        fill="var(--light-green)"
       />
 
       <path
         d="M69 180C100 172 126 153 142 128C108 125 81 145 69 180Z"
-        fill="#f5e088"
+        fill="var(--gold-highlight)"
       />
 
       <path
         d="M48 215C18 205 2 188 0 164C28 166 47 184 48 215Z"
-        fill="#80ab7e"
+        fill="var(--light-green)"
       />
     </svg>
   );

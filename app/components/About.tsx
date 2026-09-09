@@ -38,7 +38,7 @@ const advantages = [
 
 function About() {
   return (
-    <section className="relative bg-[#fffaf0]">
+    <section className="relative bg-[var(--surface-warm)]">
       <div className="mx-auto grid max-w-[1440px] lg:grid-cols-2">
         <div className="relative min-h-[460px]">
           <Image
@@ -51,7 +51,7 @@ function About() {
 
         <div className="flex items-center px-6 py-16 lg:px-16">
           <div className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-[0.17em] text-[#80ab7e]">
+            <p className="text-sm font-bold uppercase tracking-[0.17em] text-[var(--light-green)]">
               About Hakimi & Co
             </p>
 
@@ -59,9 +59,9 @@ function About() {
               Partners in Your Financial Success
             </h2>
 
-            <div className="mt-4 h-[3px] w-14 rounded-full bg-[#ffdb11]" />
+            <div className="mt-4 h-[3px] w-14 rounded-full metallic-gold" />
 
-            <p className="mt-6 text-base leading-7 text-[#554b44]">
+            <p className="mt-6 text-base leading-7 text-[var(--text-body)]">
               At Hakimi & Co, we combine expertise, technology and a
               client-focused approach to deliver financial solutions that truly
               make a difference.
@@ -73,13 +73,13 @@ function About() {
 
                 return (
                   <div key={advantage.title} className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#f5e088]/30">
-                      <Icon size={23} className="text-[#6e913d]" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--gold-highlight)]/30">
+                      <Icon size={23} className="text-[var(--primary-green)]" />
                     </div>
 
                     <div>
                       <h3 className="text-sm font-bold">{advantage.title}</h3>
-                      <p className="mt-2 text-sm leading-6 text-[#5c524c]">
+                      <p className="mt-2 text-sm leading-6 text-[var(--text-body)]">
                         {advantage.description}
                       </p>
                     </div>

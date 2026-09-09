@@ -160,7 +160,7 @@ export default function OpenPositionsPage() {
   };
 
   return (
-    <main className="overflow-hidden bg-white text-[#554b44]">
+    <main className="overflow-hidden bg-[var(--surface)] text-[var(--text-body)]">
       <OpenPositionsHero />
 
       <section
@@ -222,8 +222,8 @@ export default function OpenPositionsPage() {
 
 function OpenPositionsHero() {
   return (
-    <section className="relative overflow-hidden border-b border-[#80ab7e]/15 bg-[#f8f6ef] px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
-      <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#80ab7e]/10 blur-3xl" />
+    <section className="relative overflow-hidden border-b border-[var(--light-green)]/15 bg-[var(--surface-muted)] px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
+      <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[var(--light-green)]/10 blur-3xl" />
 
       <div className="pointer-events-none absolute -bottom-28 left-12 h-72 w-72 rounded-full bg-[var(--primary-golden)]/10 blur-3xl" />
 
@@ -261,7 +261,7 @@ function OpenPositionsHero() {
             Careers
           </p>
 
-          <div className="mt-4 h-[3px] w-12 rounded-full bg-[var(--primary-golden)]" />
+          <div className="mt-4 h-[3px] w-12 rounded-full metallic-gold" />
 
           <h1 className="mt-5 font-serif text-4xl font-semibold leading-tight text-[var(--primary-brown)] sm:text-6xl lg:text-5xl">
             Open Positions
@@ -271,7 +271,7 @@ function OpenPositionsHero() {
             Build Your Career. Make an Impact.
           </h2>
 
-          <p className="mt-7 max-w-2xl text-base leading-8 text-[#5c5048]">
+          <p className="mt-7 max-w-2xl text-base leading-8 text-[var(--text-body)]">
             We&apos;re always looking for talented, motivated and passionate
             individuals to join our team. Explore our current opportunities
             and take the next step in your career with Hakimi &amp; Co.
@@ -308,7 +308,7 @@ function JobFilters({
   resetFilters,
 }: JobFiltersProps) {
   return (
-    <div className="grid gap-4 border-b border-[#80ab7e]/25 pb-8 md:grid-cols-2 xl:grid-cols-[1.5fr_0.75fr_0.75fr_0.9fr_auto]">
+    <div className="grid gap-4 border-b border-[var(--light-green)]/25 pb-8 md:grid-cols-2 xl:grid-cols-[1.5fr_0.75fr_0.75fr_0.9fr_auto]">
       <div className="relative">
         <label htmlFor="job-search" className="sr-only">
           Search positions
@@ -316,7 +316,7 @@ function JobFilters({
 
         <Search
           size={19}
-          className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#7d746d]"
+          className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-placeholder)]"
         />
 
         <input
@@ -325,7 +325,7 @@ function JobFilters({
           value={searchQuery}
           onChange={(event) => setSearchQuery(event.target.value)}
           placeholder="Search by job title, keyword or department..."
-          className="h-14 w-full rounded-lg border border-[#854d1b]/15 bg-white pl-12 pr-4 text-sm text-[#3d210f] outline-none transition placeholder:text-[#89817a] focus:border-[#80ab7e] focus:ring-2 focus:ring-[#80ab7e]/15"
+          className="h-14 w-full rounded-lg border border-[var(--primary-brown)]/15 bg-[var(--surface)] pl-12 pr-4 text-sm text-[var(--primary-brown)] outline-none transition placeholder:text-[var(--text-placeholder)] focus:border-[var(--light-green)] focus:ring-2 focus:ring-[var(--light-green)]/15"
         />
       </div>
 
@@ -353,7 +353,7 @@ function JobFilters({
       <button
         type="button"
         onClick={resetFilters}
-        className="inline-flex h-14 items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold text-[var(--primary-green)] transition hover:bg-[#80ab7e]/10"
+        className="inline-flex h-14 items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold text-[var(--primary-green)] transition hover:bg-[var(--light-green)]/10"
       >
         <RefreshCw size={17} />
         Reset
@@ -382,7 +382,7 @@ function FilterSelect({
       <select
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="h-14 w-full appearance-none rounded-lg border border-[#854d1b]/15 bg-white px-4 pr-10 text-sm text-[#3d210f] outline-none transition focus:border-[#80ab7e] focus:ring-2 focus:ring-[#80ab7e]/15"
+        className="h-14 w-full appearance-none rounded-lg border border-[var(--primary-brown)]/15 bg-[var(--surface)] px-4 pr-10 text-sm text-[var(--primary-brown)] outline-none transition focus:border-[var(--light-green)] focus:ring-2 focus:ring-[var(--light-green)]/15"
       >
         {options.map((option) => (
           <option key={option} value={option}>
@@ -393,7 +393,7 @@ function FilterSelect({
 
       <ChevronDown
         size={17}
-        className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#66574d]"
+        className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[var(--text-muted)]"
       />
     </div>
   );
@@ -403,10 +403,10 @@ function JobCard({ job }: { job: Job }) {
   const Icon = job.icon;
 
   return (
-    <article className="group rounded-2xl border border-[#80ab7e]/20 bg-white px-5 py-6 shadow-[0_8px_30px_rgba(133,77,27,0.05)] transition duration-300 hover:-translate-y-1 hover:border-[#80ab7e]/45 hover:shadow-[0_16px_40px_rgba(133,77,27,0.10)] sm:px-7">
+    <article className="group rounded-2xl border border-[var(--light-green)]/20 bg-[var(--surface)] px-5 py-6 shadow-[0_8px_30px_color-mix(in_srgb,var(--primary-brown)_5%,transparent)] transition duration-300 hover:-translate-y-1 hover:border-[var(--light-green)]/45 hover:shadow-[0_16px_40px_color-mix(in_srgb,var(--primary-brown)_10%,transparent)] sm:px-7">
       <div className="grid items-center gap-6 lg:grid-cols-[1.35fr_0.65fr_auto]">
         <div className="flex items-start gap-5">
-          <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#80ab7e]/12 text-[var(--primary-green)] transition duration-300 group-hover:scale-105 group-hover:bg-[#80ab7e]/20">
+          <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[var(--light-green)]/12 text-[var(--primary-green)] transition duration-300 group-hover:scale-105 group-hover:bg-[var(--light-green)]/20">
             <Icon size={29} strokeWidth={1.6} />
           </div>
 
@@ -421,14 +421,14 @@ function JobCard({ job }: { job: Job }) {
               <span>{job.employmentType}</span>
             </div>
 
-            <p className="mt-3 max-w-xl text-sm leading-7 text-[#5c5048]">
+            <p className="mt-3 max-w-xl text-sm leading-7 text-[var(--text-body)]">
               {job.description}
             </p>
           </div>
         </div>
 
-        <div className="space-y-3 border-[#854d1b]/12 lg:border-l lg:pl-8">
-          <div className="flex items-center gap-3 text-sm text-[#4d3a2e]">
+        <div className="space-y-3 border-[var(--primary-brown)]/12 lg:border-l lg:pl-8">
+          <div className="flex items-center gap-3 text-sm text-[var(--text-body)]">
             <MapPin
               size={18}
               className="shrink-0 text-[var(--primary-green)]"
@@ -436,7 +436,7 @@ function JobCard({ job }: { job: Job }) {
             {job.location}
           </div>
 
-          <div className="flex items-center gap-3 text-sm text-[#4d3a2e]">
+          <div className="flex items-center gap-3 text-sm text-[var(--text-body)]">
             <BriefcaseBusiness
               size={18}
               className="shrink-0 text-[var(--primary-green)]"
@@ -447,7 +447,7 @@ function JobCard({ job }: { job: Job }) {
 
         <Link
           href={job.href}
-          className="inline-flex items-center justify-center gap-3 rounded-lg border border-[var(--primary-green)] px-6 py-3 text-sm font-semibold text-[var(--primary-green)] transition duration-300 hover:bg-[var(--primary-green)] hover:text-white"
+          className="inline-flex items-center justify-center gap-3 rounded-lg border border-[var(--primary-green)] px-6 py-3 text-sm font-semibold text-[var(--primary-green)] transition duration-300 hover:bg-[var(--primary-green)] hover:text-[var(--on-dark)]"
         >
           View Details
 
@@ -463,7 +463,7 @@ function JobCard({ job }: { job: Job }) {
 
 function NoResults({ resetFilters }: { resetFilters: () => void }) {
   return (
-    <div className="mt-8 rounded-2xl border border-[#80ab7e]/20 bg-[#f8f6ef] px-6 py-14 text-center">
+    <div className="mt-8 rounded-2xl border border-[var(--light-green)]/20 bg-[var(--surface-muted)] px-6 py-14 text-center">
       <Search
         size={38}
         className="mx-auto text-[var(--primary-green)]"
@@ -473,7 +473,7 @@ function NoResults({ resetFilters }: { resetFilters: () => void }) {
         No positions found
       </h2>
 
-      <p className="mx-auto mt-3 max-w-lg text-sm leading-7 text-[#5c5048]">
+      <p className="mx-auto mt-3 max-w-lg text-sm leading-7 text-[var(--text-body)]">
         We could not find a position matching your current search and
         filters. Try changing your selections or reset all filters.
       </p>
@@ -481,7 +481,7 @@ function NoResults({ resetFilters }: { resetFilters: () => void }) {
       <button
         type="button"
         onClick={resetFilters}
-        className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[var(--primary-green)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--dark-green)]"
+        className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[var(--primary-green)] px-6 py-3 text-sm font-semibold text-[var(--on-dark)] transition hover:bg-[var(--dark-green)]"
       >
         <RefreshCw size={17} />
         Reset Filters
@@ -493,14 +493,14 @@ function NoResults({ resetFilters }: { resetFilters: () => void }) {
 function ResumeCTA() {
   return (
     <section className="px-5 pb-20 sm:px-8 lg:px-10">
-      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl border border-[#80ab7e]/20 bg-[#f8f6ef] px-7 py-10 sm:px-12">
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl border border-[var(--light-green)]/20 bg-[var(--surface-muted)] px-7 py-10 sm:px-12">
         <div className="pointer-events-none absolute -right-12 -bottom-20 hidden opacity-15 lg:block">
           <LeafDecoration />
         </div>
 
         <div className="relative flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:text-left">
-            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[var(--primary-green)] text-white">
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[var(--primary-green)] text-[var(--on-dark)]">
               <Mail size={36} strokeWidth={1.5} />
             </div>
 
@@ -509,7 +509,7 @@ function ResumeCTA() {
                 Don&apos;t see the right fit?
               </h2>
 
-              <p className="mt-3 text-sm leading-7 text-[#5c5048]">
+              <p className="mt-3 text-sm leading-7 text-[var(--text-body)]">
                 We&apos;re always interested in hearing from talented people.
               </p>
 
@@ -521,7 +521,7 @@ function ResumeCTA() {
 
           <Link
             href="/contact?subject=Resume Submission"
-            className="group inline-flex shrink-0 items-center gap-3 rounded-lg bg-[var(--primary-green)] px-7 py-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-[var(--dark-green)] hover:shadow-lg"
+            className="group inline-flex shrink-0 items-center gap-3 rounded-lg bg-[var(--primary-green)] px-7 py-4 text-sm font-semibold text-[var(--on-dark)] transition duration-300 hover:-translate-y-1 hover:bg-[var(--dark-green)] hover:shadow-lg"
           >
             <Upload size={18} />
             Submit Your Resume
@@ -548,28 +548,28 @@ function LeafDecoration() {
     >
       <path
         d="M34 320C86 268 117 195 128 32"
-        stroke="#56742f"
+        stroke="var(--dark-green)"
         strokeWidth="2"
       />
 
       <path
         d="M120 82C82 69 55 46 42 15C83 18 112 44 120 82Z"
-        fill="#80ab7e"
+        fill="var(--light-green)"
       />
 
       <path
         d="M123 138C164 124 195 96 210 61C166 65 136 96 123 138Z"
-        fill="#f5e088"
+        fill="var(--gold-highlight)"
       />
 
       <path
         d="M97 198C56 185 27 156 13 119C56 123 87 153 97 198Z"
-        fill="#80ab7e"
+        fill="var(--light-green)"
       />
 
       <path
         d="M76 260C118 248 150 219 168 184C124 188 92 217 76 260Z"
-        fill="#f5e088"
+        fill="var(--gold-highlight)"
       />
     </svg>
   );

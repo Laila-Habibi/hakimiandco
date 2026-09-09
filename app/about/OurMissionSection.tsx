@@ -7,7 +7,7 @@ export default function AboutMission() {
   return (
     <section
       id="our-story"
-      className="relative overflow-hidden bg-[#f3f3e9]"
+      className="relative overflow-hidden bg-[var(--surface-green)]"
     >
       <div className="grid lg:grid-cols-[33%_67%]">
         {/* Left Content */}
@@ -23,28 +23,28 @@ export default function AboutMission() {
             >
               <path
                 d="M40 300C90 250 118 180 125 25"
-                stroke="#56742f"
+                stroke="var(--dark-green)"
                 strokeWidth="2"
               />
 
               <path
                 d="M118 70C85 58 58 38 45 10C82 12 109 34 118 70Z"
-                fill="#80ab7e"
+                fill="var(--light-green)"
               />
 
               <path
                 d="M105 125C142 112 168 87 180 58C145 60 118 87 105 125Z"
-                fill="#f5e088"
+                fill="var(--gold-highlight)"
               />
 
               <path
                 d="M82 180C45 170 20 145 8 112C46 115 72 141 82 180Z"
-                fill="#80ab7e"
+                fill="var(--light-green)"
               />
 
               <path
                 d="M65 235C102 225 132 200 148 170C110 171 81 195 65 235Z"
-                fill="#f5e088"
+                fill="var(--gold-highlight)"
               />
             </svg>
           </div>
@@ -58,7 +58,7 @@ export default function AboutMission() {
 
     
 
-            <p className="mt-7 text-sm leading-7 text-[#5c5048]">
+            <p className="mt-7 text-sm leading-7 text-[var(--text-body)]">
               Our team combines technical expertise with a client-first
               mindset, delivering personalized accounting, tax, and
               advisory services that help businesses and individuals make
@@ -67,7 +67,7 @@ export default function AboutMission() {
 
             <Link
               href="/team"
-              className="group mt-8 inline-flex items-center gap-3 rounded-md border border-[var(--primary-green)] px-5 py-3 text-sm font-semibold text-[var(--primary-green)] transition-all duration-300 hover:bg-[var(--primary-green)] hover:text-white"
+              className="group mt-8 inline-flex items-center gap-3 rounded-md border border-[var(--primary-green)] px-5 py-3 text-sm font-semibold text-[var(--primary-green)] transition-all duration-300 hover:bg-[var(--primary-green)] hover:text-[var(--on-dark)]"
             >
               Meet Our Team
 
@@ -90,7 +90,7 @@ export default function AboutMission() {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#56742f]/10 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--dark-green)]/10 via-transparent to-transparent" />
         </div>
       </div>
     </section>

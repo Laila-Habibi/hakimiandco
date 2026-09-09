@@ -9,7 +9,7 @@ import AboutCTA from "./CTASection";
 
 export default function AboutPage() {
   return (
-    <main className="overflow-hidden bg-[#fffdf7] text-[#854d1b]">
+    <main className="overflow-hidden bg-[var(--surface-cream)] text-[var(--primary-brown)]">
   
       <AboutHero/>
       <AboutStatistics/>

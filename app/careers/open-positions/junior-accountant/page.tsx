@@ -96,7 +96,7 @@ export default function JuniorAccountantPage() {
   };
 
   return (
-    <main className="overflow-hidden bg-white text-[#554b44]">
+    <main className="overflow-hidden bg-[var(--surface)] text-[var(--text-body)]">
       <JobHero />
 
       <JobNavigation
@@ -125,8 +125,8 @@ export default function JuniorAccountantPage() {
 
 function JobHero() {
   return (
-    <section className="relative overflow-hidden border-b border-[#80ab7e]/20 bg-[#f8f6ef] px-5 py-14 sm:px-8 lg:px-10 lg:py-20">
-      <div className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-[#80ab7e]/10 blur-3xl" />
+    <section className="relative overflow-hidden border-b border-[var(--light-green)]/20 bg-[var(--surface-muted)] px-5 py-14 sm:px-8 lg:px-10 lg:py-20">
+      <div className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-[var(--light-green)]/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 left-12 h-72 w-72 rounded-full bg-[var(--primary-golden)]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
@@ -179,7 +179,7 @@ function JobHero() {
               Junior Accountant
             </h1>
 
-            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-medium text-[#4d3a2e]">
+            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-medium text-[var(--text-body)]">
               <span className="inline-flex items-center gap-2">
                 <Building2
                   size={18}
@@ -188,7 +188,7 @@ function JobHero() {
                 Accounting
               </span>
 
-              <span className="hidden h-5 w-px bg-[#854d1b]/20 sm:block" />
+              <span className="hidden h-5 w-px bg-[var(--primary-brown)]/20 sm:block" />
 
               <span className="inline-flex items-center gap-2">
                 <BriefcaseBusiness
@@ -198,7 +198,7 @@ function JobHero() {
                 Full-time
               </span>
 
-              <span className="hidden h-5 w-px bg-[#854d1b]/20 sm:block" />
+              <span className="hidden h-5 w-px bg-[var(--primary-brown)]/20 sm:block" />
 
               <span className="inline-flex items-center gap-2">
                 <MapPin
@@ -209,9 +209,9 @@ function JobHero() {
               </span>
             </div>
 
-            <div className="mt-7 h-[3px] w-16 rounded-full bg-[var(--primary-golden)]" />
+            <div className="mt-7 h-[3px] w-16 rounded-full metallic-gold" />
 
-            <p className="mt-7 max-w-2xl text-base leading-8 text-[#5c5048]">
+            <p className="mt-7 max-w-2xl text-base leading-8 text-[var(--text-body)]">
               Join our accounting team and develop your professional skills
               while supporting accurate financial reporting, reconciliations
               and day-to-day accounting operations for our clients.
@@ -220,7 +220,7 @@ function JobHero() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/careers/open-positions/junior-accountant/apply"
-                className="group inline-flex items-center gap-3 rounded-lg bg-[var(--primary-green)] px-7 py-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-[var(--dark-green)] hover:shadow-lg"
+                className="group inline-flex items-center gap-3 rounded-lg bg-[var(--primary-green)] px-7 py-4 text-sm font-semibold text-[var(--on-dark)] transition duration-300 hover:-translate-y-1 hover:bg-[var(--dark-green)] hover:shadow-lg"
               >
                 Apply Now
                 <ArrowRight
@@ -232,7 +232,7 @@ function JobHero() {
               <a
                 href="/jobs/junior-accountant-job-description.pdf"
                 download
-                className="inline-flex items-center gap-3 rounded-lg border border-[var(--primary-green)] px-7 py-4 text-sm font-semibold text-[var(--primary-green)] transition hover:bg-[var(--primary-green)] hover:text-white"
+                className="inline-flex items-center gap-3 rounded-lg border border-[var(--primary-green)] px-7 py-4 text-sm font-semibold text-[var(--primary-green)] transition hover:bg-[var(--primary-green)] hover:text-[var(--on-dark)]"
               >
                 <Download size={18} />
                 Download Job Description
@@ -277,12 +277,12 @@ function JobOverview() {
   ];
 
   return (
-    <aside className="rounded-2xl border border-[#80ab7e]/20 bg-white p-7 shadow-[0_14px_45px_rgba(133,77,27,0.08)]">
+    <aside className="rounded-2xl border border-[var(--light-green)]/20 bg-[var(--surface)] p-7 shadow-[0_14px_45px_color-mix(in_srgb,var(--primary-brown)_8%,transparent)]">
       <h2 className="font-serif text-2xl font-semibold text-[var(--primary-green)]">
         Job Overview
       </h2>
 
-      <div className="mt-5 divide-y divide-[#854d1b]/12 border-t border-[#854d1b]/12">
+      <div className="mt-5 divide-y divide-[var(--primary-brown)]/12 border-t border-[var(--primary-brown)]/12">
         {details.map((detail) => {
           const Icon = detail.icon;
 
@@ -294,8 +294,8 @@ function JobOverview() {
               />
 
               <div>
-                <p className="text-xs text-[#756c65]">{detail.label}</p>
-                <p className="mt-1 text-sm font-medium text-[#3d2c22]">
+                <p className="text-xs text-[var(--text-muted)]">{detail.label}</p>
+                <p className="mt-1 text-sm font-medium text-[var(--primary-brown)]">
                   {detail.value}
                 </p>
               </div>
@@ -315,7 +315,7 @@ function JobNavigation({
   scrollToSection: (sectionId: string) => void;
 }) {
   return (
-    <nav className="sticky top-0 z-30 border-b border-[#854d1b]/12 bg-white/95 backdrop-blur">
+    <nav className="sticky top-0 z-30 border-b border-[var(--primary-brown)]/12 bg-[var(--surface)]/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl overflow-x-auto px-5 sm:px-8 lg:px-10">
         {tabs.map((tab) => (
           <button
@@ -325,7 +325,7 @@ function JobNavigation({
             className={`relative shrink-0 px-6 py-5 text-sm font-semibold transition ${
               activeTab === tab.id
                 ? "text-[var(--primary-green)]"
-                : "text-[#3d2c22] hover:text-[var(--primary-green)]"
+                : "text-[var(--primary-brown)] hover:text-[var(--primary-green)]"
             }`}
           >
             {tab.label}
@@ -345,14 +345,14 @@ function AboutRole() {
     <section id="about" className="scroll-mt-28">
       <SectionTitle title="About the Role" />
 
-      <p className="mt-5 text-sm leading-7 text-[#5c5048]">
+      <p className="mt-5 text-sm leading-7 text-[var(--text-body)]">
         As a Junior Accountant, you will support the daily accounting
         functions of the firm and assist with preparing accurate financial
         records and reports. You will work alongside experienced accounting
         professionals and gain exposure to a range of client engagements.
       </p>
 
-      <p className="mt-4 text-sm leading-7 text-[#5c5048]">
+      <p className="mt-4 text-sm leading-7 text-[var(--text-body)]">
         This role is suited to a detail-oriented individual who is beginning
         their accounting career and wants to strengthen their practical
         knowledge in a supportive and professional environment.
@@ -365,7 +365,7 @@ function Responsibilities() {
   return (
     <section
       id="responsibilities"
-      className="scroll-mt-28 border-t border-[#854d1b]/12 pt-10"
+      className="scroll-mt-28 border-t border-[var(--primary-brown)]/12 pt-10"
     >
       <SectionTitle title="Key Responsibilities" />
 
@@ -373,7 +373,7 @@ function Responsibilities() {
         {responsibilities.map((responsibility) => (
           <li
             key={responsibility}
-            className="flex items-start gap-3 text-sm leading-7 text-[#4d3a2e]"
+            className="flex items-start gap-3 text-sm leading-7 text-[var(--text-body)]"
           >
             <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[var(--primary-green)] text-[var(--primary-green)]">
               <Check size={12} strokeWidth={2.5} />
@@ -391,7 +391,7 @@ function Qualifications() {
   return (
     <section
       id="qualifications"
-      className="scroll-mt-28 border-t border-[#854d1b]/12 pt-10"
+      className="scroll-mt-28 border-t border-[var(--primary-brown)]/12 pt-10"
     >
       <SectionTitle title="Qualifications" />
 
@@ -399,7 +399,7 @@ function Qualifications() {
         {qualifications.map((qualification) => (
           <li
             key={qualification}
-            className="flex items-start gap-3 text-sm leading-7 text-[#4d3a2e]"
+            className="flex items-start gap-3 text-sm leading-7 text-[var(--text-body)]"
           >
             <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--primary-green)]" />
             {qualification}
@@ -412,8 +412,8 @@ function Qualifications() {
 
 function ApplyCard() {
   return (
-    <aside className="h-fit rounded-3xl bg-[#f8f6ef] px-7 py-10 text-center lg:sticky lg:top-28">
-      <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[var(--primary-green)] text-white">
+    <aside className="h-fit rounded-3xl bg-[var(--surface-muted)] px-7 py-10 text-center lg:sticky lg:top-28">
+      <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[var(--primary-green)] text-[var(--on-dark)]">
         <Mail size={34} strokeWidth={1.5} />
       </div>
 
@@ -421,14 +421,14 @@ function ApplyCard() {
         Ready to Apply?
       </h2>
 
-      <p className="mt-4 text-sm leading-7 text-[#5c5048]">
+      <p className="mt-4 text-sm leading-7 text-[var(--text-body)]">
         We&apos;d love to hear from you. Submit your application and take the
         next step toward joining our growing team.
       </p>
 
       <Link
         href="/careers/open-positions/junior-accountant/apply"
-        className="group mt-7 inline-flex w-full items-center justify-center gap-3 rounded-lg bg-[var(--primary-green)] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[var(--dark-green)]"
+        className="group mt-7 inline-flex w-full items-center justify-center gap-3 rounded-lg bg-[var(--primary-green)] px-6 py-4 text-sm font-semibold text-[var(--on-dark)] transition hover:bg-[var(--dark-green)]"
       >
         Apply Now
 
@@ -439,14 +439,14 @@ function ApplyCard() {
       </Link>
 
       <div className="my-7 flex items-center gap-4">
-        <span className="h-px flex-1 bg-[#854d1b]/15" />
-        <span className="text-xs text-[#756c65]">or</span>
-        <span className="h-px flex-1 bg-[#854d1b]/15" />
+        <span className="h-px flex-1 bg-[var(--primary-brown)]/15" />
+        <span className="text-xs text-[var(--text-muted)]">or</span>
+        <span className="h-px flex-1 bg-[var(--primary-brown)]/15" />
       </div>
 
       <Link
         href="/contact?subject=Resume Submission"
-        className="inline-flex w-full items-center justify-center gap-3 rounded-lg border border-[var(--primary-green)] px-6 py-4 text-sm font-semibold text-[var(--primary-green)] transition hover:bg-[var(--primary-green)] hover:text-white"
+        className="inline-flex w-full items-center justify-center gap-3 rounded-lg border border-[var(--primary-green)] px-6 py-4 text-sm font-semibold text-[var(--primary-green)] transition hover:bg-[var(--primary-green)] hover:text-[var(--on-dark)]"
       >
         <Upload size={18} />
         Upload Your Resume
@@ -459,7 +459,7 @@ function WhatWeOffer() {
   return (
     <section
       id="offer"
-      className="mt-16 scroll-mt-28 rounded-3xl border border-[#80ab7e]/15 bg-[#f8f6ef] px-7 py-10 sm:px-10"
+      className="mt-16 scroll-mt-28 rounded-3xl border border-[var(--light-green)]/15 bg-[var(--surface-muted)] px-7 py-10 sm:px-10"
     >
       <SectionTitle title="What We Offer" />
 
@@ -472,11 +472,11 @@ function WhatWeOffer() {
               key={item.title}
               className={`px-5 text-center ${
                 index !== offerItems.length - 1
-                  ? "lg:border-r lg:border-[#854d1b]/12"
+                  ? "lg:border-r lg:border-[var(--primary-brown)]/12"
                   : ""
               }`}
             >
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#80ab7e]/12 text-[var(--primary-green)]">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[var(--light-green)]/12 text-[var(--primary-green)]">
                 <Icon size={29} strokeWidth={1.6} />
               </div>
 
@@ -484,7 +484,7 @@ function WhatWeOffer() {
                 {item.title}
               </h3>
 
-              <p className="mt-3 text-xs leading-6 text-[#5c5048]">
+              <p className="mt-3 text-xs leading-6 text-[var(--text-body)]">
                 {item.description}
               </p>
             </article>
@@ -498,13 +498,13 @@ function WhatWeOffer() {
 function QuestionsCTA() {
   return (
     <section className="px-5 pb-20 sm:px-8 lg:px-10">
-      <div className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 overflow-hidden rounded-3xl bg-[var(--primary-green)] px-8 py-10 text-white sm:px-12 md:flex-row md:items-center">
+      <div className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 overflow-hidden rounded-3xl bg-[var(--primary-green)] px-8 py-10 text-[var(--on-dark)] sm:px-12 md:flex-row md:items-center">
         <div className="pointer-events-none absolute -bottom-24 -right-16 opacity-10">
           <LeafDecoration />
         </div>
 
         <div className="relative flex items-center gap-6">
-          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-white text-[var(--primary-green)]">
+          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[var(--surface)] text-[var(--primary-green)]">
             <CircleHelp size={38} strokeWidth={1.5} />
           </div>
 
@@ -513,7 +513,7 @@ function QuestionsCTA() {
               Questions about this role?
             </h2>
 
-            <p className="mt-3 text-sm leading-7 text-white/80">
+            <p className="mt-3 text-sm leading-7 text-[var(--on-dark)]/80">
               Our team is ready to help. Contact us for more information.
             </p>
           </div>
@@ -521,7 +521,7 @@ function QuestionsCTA() {
 
         <Link
           href="/contact?subject=Junior Accountant Question"
-          className="relative inline-flex items-center gap-3 font-semibold text-[var(--primary-golden)] transition hover:text-white"
+          className="relative inline-flex items-center gap-3 font-semibold metallic-gold-text transition hover:text-[var(--on-dark)] hover:[-webkit-text-fill-color:currentColor]"
         >
           Contact Us
           <ArrowRight size={18} />
@@ -538,7 +538,7 @@ function SectionTitle({ title }: { title: string }) {
         {title}
       </h2>
 
-      <div className="mt-4 h-[3px] w-12 rounded-full bg-[var(--primary-golden)]" />
+      <div className="mt-4 h-[3px] w-12 rounded-full metallic-gold" />
     </div>
   );
 }

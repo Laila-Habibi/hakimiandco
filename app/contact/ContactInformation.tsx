@@ -14,25 +14,24 @@ const contactDetails = [
     icon: MapPin,
     title: "Our Office",
     lines: [
-      "1200 Sheppard Avenue East",
-      "Suite 205, Toronto, ON",
-      "M2K 1E3, Canada",
+      "172 Britannia Avenue East",
+      "Oshawa, Canada",
     ],
   },
   {
     icon: Phone,
     title: "Phone",
-    lines: ["+1 (416) 555-1234", "+1 (647) 555-5678"],
+    lines: ["+1 (647) 226 2492"],
   },
   {
     icon: Mail,
     title: "Email",
-    lines: ["info@hakimiandco.ca", "hello@hakimiandco.ca"],
+    lines: ["info@hakimiandco.ca"],
   },
   {
     icon: Clock3,
     title: "Business Hours",
-    lines: ["Monday – Friday", "9:00 AM – 5:00 PM", "Saturday – Sunday", "Closed"],
+    lines: ["Tuesday – Thursday", "9:00 AM – 5:00 PM"],
   },
 ];
 
@@ -56,9 +55,9 @@ export default function ContactInformation() {
             return (
               <article
                 key={detail.title}
-                className="group rounded-2xl border border-[#854d1b]/15 bg-white px-6 py-8 text-center transition duration-300 hover:-translate-y-1 hover:border-[#80ab7e]/45 hover:shadow-xl hover:shadow-[#56742f]/5"
+                className="group rounded-2xl border border-[var(--primary-brown)]/15 bg-[var(--surface)] px-6 py-8 text-center transition duration-300 hover:-translate-y-1 hover:border-[var(--light-green)]/45 hover:shadow-xl hover:shadow-[var(--dark-green)]/5"
               >
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#f1f2e8] text-[var(--primary-green)] transition duration-300 group-hover:scale-105">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[var(--surface-green)] text-[var(--primary-green)] transition duration-300 group-hover:scale-105">
                   <Icon size={29} strokeWidth={1.6} />
                 </div>
 
@@ -66,7 +65,7 @@ export default function ContactInformation() {
                   {detail.title}
                 </h3>
 
-                <div className="mt-4 space-y-1 text-sm leading-6 text-[#5c5048]">
+                <div className="mt-4 space-y-1 text-sm leading-6 text-[var(--text-body)]">
                   {detail.lines.map((line) => (
                     <p key={line}>{line}</p>
                   ))}

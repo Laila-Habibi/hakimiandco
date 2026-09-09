@@ -10,7 +10,7 @@ import OfficeLocation from "./OfficeLocation";
 
 export default function ContactPage() {
   return (
-    <main className="overflow-hidden bg-white">
+    <main className="overflow-hidden bg-[var(--surface)]">
       <ContactHero />
       <ContactInformation />
       <ContactFormSection />

@@ -19,7 +19,7 @@ export default function SectionHeading({
         isLeft ? "text-left" : "mx-auto text-center"
       }`}
     >
-      <p className="text-sm font-bold uppercase tracking-[0.17em] text-[#80ab7e]">
+      <p className="text-sm font-bold uppercase tracking-[0.17em] text-[var(--light-green)]">
         {eyebrow}
       </p>
 
@@ -29,7 +29,7 @@ export default function SectionHeading({
 
       {showUnderline && (
         <div
-          className={`mt-4 h-[3px] w-14 rounded-full bg-[#ffdb11] ${
+          className={`mt-4 h-[3px] w-14 rounded-full metallic-gold ${
             isLeft ? "" : "mx-auto"
           }`}
         />
@@ -37,7 +37,7 @@ export default function SectionHeading({
 
       {description && (
         <p
-          className={`text-sm leading-7 text-[#554b44] ${
+          className={`text-sm leading-7 text-[var(--text-body)] ${
             showUnderline ? "mt-5" : "mt-4"
           }`}
         >

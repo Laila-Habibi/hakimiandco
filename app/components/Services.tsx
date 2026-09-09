@@ -78,13 +78,13 @@ function Services() {
             return (
               <article
                 key={service.title}
-                className="group flex min-h-[340px] flex-col items-center rounded-xl border border-[#80ab7e]/30 bg-white px-6 py-8 text-center shadow-[0_10px_40px_rgba(133,77,27,0.05)] transition hover:-translate-y-2 hover:shadow-[0_18px_45px_rgba(133,77,27,0.12)]"
+                className="group flex min-h-[340px] flex-col items-center rounded-xl border border-[var(--light-green)]/30 bg-[var(--surface)] px-6 py-8 text-center shadow-[0_10px_40px_color-mix(in_srgb,var(--primary-brown)_5%,transparent)] transition hover:-translate-y-2 hover:shadow-[0_18px_45px_color-mix(in_srgb,var(--primary-brown)_12%,transparent)]"
               >
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#80ab7e]/10">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[var(--light-green)]/10">
                   <Icon
                     size={39}
                     strokeWidth={1.5}
-                    className="text-[#6e913d]"
+                    className="text-[var(--primary-green)]"
                   />
                 </div>
 
@@ -92,13 +92,13 @@ function Services() {
                   {service.title}
                 </h3>
 
-                <p className="mt-4 flex-1 text-sm leading-6 text-[#554b44]">
+                <p className="mt-4 flex-1 text-sm leading-6 text-[var(--text-body)]">
                   {service.description}
                 </p>
 
                 <Link
                   href={service.href}
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#6e913d]"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary-green)]"
                 >
                   Learn More
                   <ArrowRight
@@ -128,7 +128,7 @@ function SectionHeading({
 }) {
   return (
     <div className="mx-auto max-w-3xl text-center">
-      <p className="text-sm font-bold uppercase tracking-[0.17em] text-[#80ab7e]">
+      <p className="text-sm font-bold uppercase tracking-[0.17em] text-[var(--light-green)]">
         {eyebrow}
       </p>
 
@@ -136,10 +136,10 @@ function SectionHeading({
         {title}
       </h2>
 
-      <div className="mx-auto mt-4 h-[3px] w-14 rounded-full bg-[#ffdb11]" />
+      <div className="mx-auto mt-4 h-[3px] w-14 rounded-full metallic-gold" />
 
       {description && (
-        <p className="mt-5 text-sm leading-7 text-[#554b44]">{description}</p>
+        <p className="mt-5 text-sm leading-7 text-[var(--text-body)]">{description}</p>
       )}
     </div>
   );

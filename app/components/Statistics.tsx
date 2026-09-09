@@ -106,7 +106,7 @@ function AnimatedCounter({
 
 function Statistics() {
   return (
-    <section className="bg-[var(--primary-green)] px-5 py-7 text-white">
+    <section className="bg-[var(--primary-green)] px-5 py-7 text-[var(--on-dark)]">
       <div className="mx-auto grid max-w-[1320px] gap-7 sm:grid-cols-2 lg:grid-cols-4">
         {statistics.map((statistic, index) => {
           const Icon = statistic.icon;
@@ -116,14 +116,14 @@ function Statistics() {
               key={statistic.label}
               className={`flex items-center justify-center gap-4 py-2 ${
                 index !== statistics.length - 1
-                  ? "lg:border-r lg:border-white/25"
+                  ? "lg:border-r lg:border-[var(--surface)]/25"
                   : ""
               }`}
             >
-              <Icon size={39} strokeWidth={1.5} className="text-[#ffdb11]" />
+              <Icon size={39} strokeWidth={1.5} className="text-[var(--primary-golden)]" />
 
               <div>
-                <p className="text-3xl font-semibold text-[#ffdb11]">
+                <p className="text-3xl font-semibold w-fit metallic-gold-text">
                  <AnimatedCounter
                   value={statistic.value}
                   suffix={statistic.suffix}

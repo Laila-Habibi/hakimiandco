@@ -30,9 +30,9 @@ const audiences = [
     icon: BriefcaseBusiness,
   },
   {
-    title: "Businesses",
+    title: "Private Businesses",
     description:
-      "We support businesses of all sizes with strategic tax planning, compliance and filing so you can focus on growth.",
+      "We help privately owned businesses navigate tax planning, compliance and filing, so owners can focus on running their business and building long-term value.",
     icon: Building2,
   },
 ];
@@ -134,7 +134,7 @@ const benefits = [
 
 export default function TaxSolutionsPage() {
   return (
-    <main className="overflow-hidden bg-white text-[#554b44]">
+    <main className="overflow-hidden bg-[var(--surface)] text-[var(--text-body)]">
       <TaxHero />
       <WhoWeHelp />
       <TaxServices />
@@ -148,9 +148,9 @@ export default function TaxSolutionsPage() {
 
 function TaxHero() {
   return (
-    <section className="relative overflow-hidden border-b border-[#80ab7e]/15 bg-[#f8f6ef] px-6 py-16 sm:px-10 lg:py-20">
-      <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#80ab7e]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-20 left-10 h-64 w-64 rounded-full bg-[#ffdb11]/10 blur-3xl" />
+    <section className="relative overflow-hidden border-b border-[var(--light-green)]/15 bg-[var(--surface-muted)] px-6 py-16 sm:px-10 lg:py-20">
+      <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[var(--light-green)]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-20 left-10 h-64 w-64 rounded-full bg-[var(--primary-golden)]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
         <div className="flex flex-wrap items-center gap-2 text-sm font-medium">
@@ -161,7 +161,7 @@ function TaxHero() {
             Home
           </Link>
 
-          <span className="text-[#80ab7e]">›</span>
+          <span className="text-[var(--light-green)]">›</span>
 
           <span
             
@@ -170,13 +170,13 @@ function TaxHero() {
             Services
           </span>
 
-          <span className="text-[#80ab7e]">›</span>
+          <span className="text-[var(--light-green)]">›</span>
 
           <span className="text-[var(--primary-brown)]">Tax Solutions</span>
         </div>
 
         <div className="mt-10 max-w-4xl">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#80ab7e]">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--light-green)]">
             Professional Tax Support
           </p>
 
@@ -188,9 +188,9 @@ function TaxHero() {
             Smart Planning. Confident Filing. Lasting Value.
           </h2>
 
-          <div className="mt-6 h-[3px] w-16 rounded-full bg-[var(--primary-golden)]" />
+          <div className="mt-6 h-[3px] w-16 rounded-full metallic-gold" />
 
-          <p className="mt-7 max-w-4xl text-base leading-8 text-[#5c5048]">
+          <p className="mt-7 max-w-4xl text-base leading-8 text-[var(--text-body)]">
             Taxes can be complex, but managing them should not be stressful. At
             Hakimi &amp; Co., we provide comprehensive tax planning, preparation
             and filing services for individuals, self-employed professionals and
@@ -222,12 +222,12 @@ function WhoWeHelp() {
                 key={audience.title}
                 className={`group px-6 py-3 ${
                   index !== audiences.length - 1
-                    ? "lg:border-r lg:border-[#854d1b]/15"
+                    ? "lg:border-r lg:border-[var(--primary-brown)]/15"
                     : ""
                 }`}
               >
                 <div className="flex items-start gap-5">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#80ab7e]/12 text-[var(--primary-green)] transition duration-300 group-hover:-translate-y-1 group-hover:bg-[#80ab7e]/20">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[var(--light-green)]/12 text-[var(--primary-green)] transition duration-300 group-hover:-translate-y-1 group-hover:bg-[var(--light-green)]/20">
                     <Icon size={31} strokeWidth={1.6} />
                   </div>
 
@@ -236,7 +236,7 @@ function WhoWeHelp() {
                       {audience.title}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-7 text-[#5c5048]">
+                    <p className="mt-3 text-sm leading-7 text-[var(--text-body)]">
                       {audience.description}
                     </p>
                   </div>
@@ -252,7 +252,7 @@ function WhoWeHelp() {
 
 function TaxServices() {
   return (
-    <section className="bg-[#fbfaf6] px-6 py-20 sm:px-10 lg:py-24">
+    <section className="bg-[var(--surface-cream)] px-6 py-20 sm:px-10 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Our Tax Services"
@@ -260,7 +260,7 @@ function TaxServices() {
           align="left"
         />
 
-        <div className="mt-10 divide-y divide-[#854d1b]/12">
+        <div className="mt-10 divide-y divide-[var(--primary-brown)]/12">
           {taxServices.map((service) => {
             const Icon = service.icon;
 
@@ -269,7 +269,7 @@ function TaxServices() {
                 key={service.title}
                 className="group grid gap-6 py-8 sm:grid-cols-[72px_1fr]"
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#80ab7e]/12 text-[var(--primary-green)] transition duration-300 group-hover:scale-105 group-hover:bg-[#80ab7e]/20">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[var(--light-green)]/12 text-[var(--primary-green)] transition duration-300 group-hover:scale-105 group-hover:bg-[var(--light-green)]/20">
                   <Icon size={31} strokeWidth={1.6} />
                 </div>
 
@@ -278,7 +278,7 @@ function TaxServices() {
                     {service.title}
                   </h3>
 
-                  <p className="mt-3 max-w-5xl text-sm leading-7 text-[#5c5048]">
+                  <p className="mt-3 max-w-5xl text-sm leading-7 text-[var(--text-body)]">
                     {service.description}
                   </p>
                 </div>
@@ -294,9 +294,9 @@ function TaxServices() {
 function OurApproach() {
   return (
     <section className="px-6 py-20 sm:px-10">
-      <div className="mx-auto grid max-w-7xl gap-12 rounded-3xl border border-[#80ab7e]/20 bg-[#f7f4e9] px-7 py-10 sm:px-10 lg:grid-cols-[0.8fr_1.2fr] lg:px-12 lg:py-14">
+      <div className="mx-auto grid max-w-7xl gap-12 rounded-3xl border border-[var(--light-green)]/20 bg-[var(--surface-muted)] px-7 py-10 sm:px-10 lg:grid-cols-[0.8fr_1.2fr] lg:px-12 lg:py-14">
         <div>
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#80ab7e]">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--light-green)]">
             Our Approach
           </p>
 
@@ -305,9 +305,9 @@ function OurApproach() {
             <span className="text-[var(--primary-green)]"> Personal.</span>
           </h2>
 
-          <div className="mt-5 h-[3px] w-14 rounded-full bg-[var(--primary-golden)]" />
+          <div className="mt-5 h-[3px] w-14 rounded-full metallic-gold" />
 
-          <p className="mt-6 text-sm leading-7 text-[#5c5048]">
+          <p className="mt-6 text-sm leading-7 text-[var(--text-body)]">
             We do not simply prepare your taxes—we help you understand them.
             Our proactive approach is built on understanding your unique goals
             and financial situation so we can provide solutions that make a
@@ -315,14 +315,14 @@ function OurApproach() {
           </p>
         </div>
 
-        <div className="space-y-5 lg:border-l lg:border-[#854d1b]/15 lg:pl-10">
+        <div className="space-y-5 lg:border-l lg:border-[var(--primary-brown)]/15 lg:pl-10">
           {approachSteps.map((step) => (
             <div key={step.title} className="flex items-start gap-4">
-              <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--primary-green)] text-white">
+              <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--primary-green)] text-[var(--on-dark)]">
                 <Check size={14} strokeWidth={2.5} />
               </div>
 
-              <p className="text-sm leading-7 text-[#5c5048]">
+              <p className="text-sm leading-7 text-[var(--text-body)]">
                 <strong className="text-[var(--primary-brown)]">
                   {step.title}:
                 </strong>{" "}
@@ -346,14 +346,14 @@ function CommonSituations() {
           align="left"
         />
 
-        <div className="mt-10 grid gap-x-10 gap-y-4 rounded-2xl bg-[#f7f4e9] px-7 py-8 sm:grid-cols-2">
+        <div className="mt-10 grid gap-x-10 gap-y-4 rounded-2xl bg-[var(--surface-muted)] px-7 py-8 sm:grid-cols-2">
           {situations.map((situation) => (
             <div key={situation} className="flex items-start gap-3">
-              <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--primary-green)] text-white">
+              <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--primary-green)] text-[var(--on-dark)]">
                 <Check size={12} strokeWidth={2.5} />
               </span>
 
-              <p className="text-sm leading-6 text-[#4d3a2e]">{situation}</p>
+              <p className="text-sm leading-6 text-[var(--text-body)]">{situation}</p>
             </div>
           ))}
         </div>
@@ -364,7 +364,7 @@ function CommonSituations() {
 
 function Benefits() {
   return (
-    <section className="bg-[#fbfaf6] px-6 py-20 sm:px-10">
+    <section className="bg-[var(--surface-cream)] px-6 py-20 sm:px-10">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Why Work With Hakimi & Co."
@@ -381,11 +381,11 @@ function Benefits() {
                 key={benefit.title}
                 className={`px-6 ${
                   index !== benefits.length - 1
-                    ? "lg:border-r lg:border-[#854d1b]/15"
+                    ? "lg:border-r lg:border-[var(--primary-brown)]/15"
                     : ""
                 }`}
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#80ab7e]/12 text-[var(--primary-green)]">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[var(--light-green)]/12 text-[var(--primary-green)]">
                   <Icon size={31} strokeWidth={1.6} />
                 </div>
 
@@ -393,7 +393,7 @@ function Benefits() {
                   {benefit.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-[#5c5048]">
+                <p className="mt-3 text-sm leading-7 text-[var(--text-body)]">
                   {benefit.description}
                 </p>
               </article>
@@ -408,16 +408,16 @@ function Benefits() {
 function TaxCTA() {
   return (
     <section className="px-6 py-20 sm:px-10">
-      <div className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 overflow-hidden rounded-2xl bg-[var(--primary-green)] px-8 py-10 text-white sm:px-12 lg:flex-row lg:items-center">
-        <div className="pointer-events-none absolute -left-20 -top-24 h-64 w-64 rounded-full border border-white/10" />
-        <div className="pointer-events-none absolute -bottom-28 right-16 h-72 w-72 rounded-full border border-white/10" />
+      <div className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 overflow-hidden rounded-2xl bg-[var(--primary-green)] px-8 py-10 text-[var(--on-dark)] sm:px-12 lg:flex-row lg:items-center">
+        <div className="pointer-events-none absolute -left-20 -top-24 h-64 w-64 rounded-full border border-[var(--surface)]/10" />
+        <div className="pointer-events-none absolute -bottom-28 right-16 h-72 w-72 rounded-full border border-[var(--surface)]/10" />
 
         <div className="relative max-w-2xl">
           <h2 className="font-serif text-3xl font-semibold sm:text-4xl">
             Let&apos;s Make Tax Season Simple
           </h2>
 
-          <p className="mt-3 max-w-xl text-sm leading-7 text-white/80">
+          <p className="mt-3 max-w-xl text-sm leading-7 text-[var(--on-dark)]/80">
             Book a consultation today and discover how we can help you save
             more, remain compliant and worry less.
           </p>
@@ -425,7 +425,7 @@ function TaxCTA() {
 
         <Link
           href="/contact"
-          className="group relative inline-flex shrink-0 items-center gap-3 rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-[var(--primary-green)] transition hover:-translate-y-1 hover:shadow-xl"
+          className="group relative inline-flex shrink-0 items-center gap-3 rounded-lg bg-[var(--surface)] px-6 py-3.5 text-sm font-semibold text-[var(--primary-green)] transition hover:-translate-y-1 hover:shadow-xl"
         >
           Book a Consultation
 
@@ -460,7 +460,7 @@ function SectionHeading({
         isLeft ? "text-left" : "mx-auto text-center"
       }`}
     >
-      <p className="text-sm font-bold uppercase tracking-[0.17em] text-[#80ab7e]">
+      <p className="text-sm font-bold uppercase tracking-[0.17em] text-[var(--light-green)]">
         {eyebrow}
       </p>
 
@@ -470,7 +470,7 @@ function SectionHeading({
 
       {showUnderline && (
         <div
-          className={`mt-4 h-[3px] w-14 rounded-full bg-[var(--primary-golden)] ${
+          className={`mt-4 h-[3px] w-14 rounded-full metallic-gold ${
             isLeft ? "" : "mx-auto"
           }`}
         />
@@ -478,7 +478,7 @@ function SectionHeading({
 
       {description && (
         <p
-          className={`text-sm leading-7 text-[#554b44] ${
+          className={`text-sm leading-7 text-[var(--text-body)] ${
             showUnderline ? "mt-5" : "mt-4"
           }`}
         >

@@ -18,7 +18,7 @@ import {
 export default function ContactFormSection() {
   return (
     <section className="px-6 pb-16 sm:px-10 lg:pb-20">
-      <div className="mx-auto grid max-w-7xl overflow-hidden rounded-[28px] border border-[#854d1b]/10 bg-[#fffdf8] shadow-sm lg:grid-cols-[54%_46%]">
+      <div className="mx-auto grid max-w-7xl overflow-hidden rounded-[28px] border border-[var(--primary-brown)]/10 bg-[var(--surface-cream)] shadow-sm lg:grid-cols-[54%_46%]">
         <div className="relative px-6 py-10 sm:px-10 lg:px-12 lg:py-14">
           <div className="pointer-events-none absolute -bottom-24 right-0 opacity-20">
           
@@ -71,7 +71,7 @@ export default function ContactFormSection() {
                 <Mail
                   size={18}
                   strokeWidth={1.6}
-                  className="absolute left-4 top-4 text-[#789066]"
+                  className="absolute left-4 top-4 text-[var(--light-green)]"
                 />
 
                 <label htmlFor="message" className="sr-only">
@@ -84,15 +84,15 @@ export default function ContactFormSection() {
                   rows={6}
                   placeholder="How can we help you?"
                   required
-                  className="w-full resize-none rounded-lg border border-[#854d1b]/15 bg-white py-4 pl-12 pr-4 text-sm text-[#3f281a] outline-none transition placeholder:text-[#8b817a] focus:border-[#80ab7e] focus:ring-2 focus:ring-[#80ab7e]/15"
+                  className="w-full resize-none rounded-lg border border-[var(--primary-brown)]/15 bg-[var(--surface)] py-4 pl-12 pr-4 text-sm text-[var(--primary-brown)] outline-none transition placeholder:text-[var(--text-placeholder)] focus:border-[var(--light-green)] focus:ring-2 focus:ring-[var(--light-green)]/15"
                 />
               </div>
 
-              <label className="mt-5 flex cursor-pointer items-start gap-3 text-xs leading-5 text-[#66574d]">
+              <label className="mt-5 flex cursor-pointer items-start gap-3 text-xs leading-5 text-[var(--text-muted)]">
                 <input
                   type="checkbox"
                   required
-                  className="mt-0.5 h-4 w-4 rounded border-[#854d1b]/25 accent-[#56742f]"
+                  className="mt-0.5 h-4 w-4 rounded border-[var(--primary-brown)]/25 accent-[var(--dark-green)]"
                 />
 
                 <span>
@@ -109,7 +109,7 @@ export default function ContactFormSection() {
 
               <button
                 type="submit"
-                className="group mt-6 inline-flex items-center gap-4 rounded-md bg-[var(--primary-green)] px-7 py-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-[var(--dark-green)] hover:shadow-lg"
+                className="group mt-6 inline-flex items-center gap-4 rounded-md bg-[var(--primary-green)] px-7 py-4 text-sm font-semibold text-[var(--on-dark)] transition duration-300 hover:-translate-y-1 hover:bg-[var(--dark-green)] hover:shadow-lg"
               >
                 Send Message
 
@@ -131,7 +131,7 @@ export default function ContactFormSection() {
             className="object-cover"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1f3218]/15 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--overlay-green)]/15 to-transparent" />
         </div>
       </div>
     </section>
@@ -161,7 +161,7 @@ function FormField({
       <Icon
         size={18}
         strokeWidth={1.6}
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-[#789066]"
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--light-green)]"
       />
 
       <label htmlFor={id} className="sr-only">
@@ -174,7 +174,7 @@ function FormField({
         type={type}
         placeholder={placeholder}
         required
-        className="h-14 w-full rounded-lg border border-[#854d1b]/15 bg-white pl-12 pr-4 text-sm text-[#3f281a] outline-none transition placeholder:text-[#8b817a] focus:border-[#80ab7e] focus:ring-2 focus:ring-[#80ab7e]/15"
+        className="h-14 w-full rounded-lg border border-[var(--primary-brown)]/15 bg-[var(--surface)] pl-12 pr-4 text-sm text-[var(--primary-brown)] outline-none transition placeholder:text-[var(--text-placeholder)] focus:border-[var(--light-green)] focus:ring-2 focus:ring-[var(--light-green)]/15"
       />
     </div>
   );

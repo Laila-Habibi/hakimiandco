@@ -22,7 +22,7 @@ const statistics = [
     suffix: "+",
     title: "Years of Experience",
     description:
-      "Decades of combined expertise you can rely on.",
+      "Years of combined expertise you can rely on.",
   },
   {
     icon: ChartPie,
@@ -44,7 +44,7 @@ const statistics = [
 
 export default function AboutStatistics() {
   return (
-    <section className="relative overflow-hidden bg-[var(--primary-green)] px-6 py-11 text-white">
+    <section className="relative overflow-hidden bg-[var(--primary-green)] px-6 py-11 text-[var(--on-dark)]">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.06]">
         <div className="h-full w-full bg-[radial-gradient(circle_at_center,_#ffffff_1px,_transparent_1px)] bg-[size:18px_18px]" />
@@ -59,11 +59,11 @@ export default function AboutStatistics() {
               key={statistic.title}
               className={`group flex gap-5 ${
                 index !== statistics.length - 1
-                  ? "lg:border-r lg:border-white/20 lg:pr-8"
+                  ? "lg:border-r lg:border-[var(--surface)]/20 lg:pr-8"
                   : ""
               }`}
             >
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-white/15">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[var(--surface)]/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-[var(--surface)]/15">
                 <Icon
                   size={34}
                   strokeWidth={1.8}
@@ -72,7 +72,7 @@ export default function AboutStatistics() {
               </div>
 
               <div>
-                <p className="font-serif text-3xl font-semibold text-[#f5e088]">
+                <p className="font-serif text-3xl font-semibold w-fit metallic-gold-text">
                   <AnimatedCounter
                     value={statistic.value}
                     suffix={statistic.suffix}
@@ -83,7 +83,7 @@ export default function AboutStatistics() {
                   {statistic.title}
                 </h3>
 
-                <p className="mt-3 max-w-[220px] text-xs leading-6 text-white/75">
+                <p className="mt-3 max-w-[220px] text-xs leading-6 text-[var(--on-dark)]/75">
                   {statistic.description}
                 </p>
               </div>

@@ -52,7 +52,7 @@ const benefits = [
 
 export default function BenefitsSection(){
       return (
-    <section className="relative overflow-hidden bg-white px-6 py-24 sm:px-10">
+    <section className="relative overflow-hidden bg-[var(--surface)] px-6 py-24 sm:px-10">
       <div className="mx-auto max-w-7xl">
 
         
@@ -70,15 +70,15 @@ export default function BenefitsSection(){
                 key={benefit.title}
                 className={`group px-5 text-center ${
                   index !== benefits.length - 1
-                    ? "lg:border-r lg:border-[#854d1b]/15"
+                    ? "lg:border-r lg:border-[var(--primary-brown)]/15"
                     : ""
                 }`}
               >
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#f3f3e9] transition duration-300 group-hover:-translate-y-1 group-hover:bg-[#80ab7e]/20">
+                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[var(--surface-green)] transition duration-300 group-hover:-translate-y-1 group-hover:bg-[var(--light-green)]/20">
                   <Icon
                     size={35}
                     strokeWidth={1.7}
-                    className="text-[#56742f]"
+                    className="text-[var(--dark-green)]"
                   />
                 </div>
 
@@ -86,7 +86,7 @@ export default function BenefitsSection(){
                   {benefit.title}
                 </h3>
 
-                <p className="mx-auto mt-4 max-w-[180px] text-xs leading-6 text-[#66574d]">
+                <p className="mx-auto mt-4 max-w-[180px] text-xs leading-6 text-[var(--text-muted)]">
                   {benefit.description}
                 </p>
               </article>
