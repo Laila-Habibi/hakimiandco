@@ -64,6 +64,8 @@ export default function AboutHero() {
             Learn more about our values, our experience, and the people
             behind Hakimi &amp; Co.
           </p>
+
+           
         </div>
       </div>
     </section>

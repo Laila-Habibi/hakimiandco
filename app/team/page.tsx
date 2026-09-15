@@ -54,19 +54,19 @@ const teamMembers = [
     imagePosition: "center 50%",
     linkedin: "",
   },
-  {
-    name: "Jessica Huang, CPA, MFin",
-    role: "Accounting & Audit Professional",
-    description:
-      "Over four years of accounting and audit experience serving private businesses and non-profit organizations.",
-    image: "/team/jessica-huang.jpg",
-    imageLift: 12,
-    imagePosition: "center 50%",
-    linkedin: "",
-  },
+  // {
+  //   name: "Jessica Huang, CPA, MFin",
+  //   role: "Accounting & Audit Professional",
+  //   description:
+  //     "Over four years of accounting and audit experience serving private businesses and non-profit organizations.",
+  //   image: "/team/jessica-huang.jpg",
+  //   imageLift: 12,
+  //   imagePosition: "center 50%",
+  //   linkedin: "",
+  // },
   {
     name: "Laila Habibi",
-    role: "Data Analyst",
+    role: "Data Analyst, AI Specialist",
     description:
       "A data analyst with a background in AI and technology, Laila brings an analytical approach to business insights and digital solutions.",
     image: "/team/laila-habibi.jpeg",
