@@ -27,7 +27,7 @@ export default function HomePage() {
       <About />
       <Statistics />
       <Resources />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CTA />
      
 
