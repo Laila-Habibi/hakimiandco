@@ -51,7 +51,7 @@ const teamMembers = [
     role: "Director of Client Relations",
     description:
       "Basir Hakimi is the firm’s Director of Client Relations, with 13+ years of experience building trusted client relationships across construction and hospitality.",
-    image: "/team/BAsir-Hakimi.png",
+    image: "/team/Basir-Hakimi.png",
     imagePosition: "center 15%",
     linkedin: "",
   },
