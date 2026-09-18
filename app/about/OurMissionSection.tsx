@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
@@ -9,7 +8,7 @@ export default function AboutMission() {
       id="our-story"
       className="relative overflow-hidden bg-[var(--surface-green)]"
     >
-      <div className="grid lg:grid-cols-[33%_67%]">
+      <div className="mx-auto max-w-7xl">
         {/* Left Content */}
         <div className="relative flex items-center px-6 py-16 sm:px-10 lg:px-16 xl:px-20">
           {/* Decorative Background */}
@@ -49,7 +48,7 @@ export default function AboutMission() {
             </svg>
           </div>
 
-          <div className="relative z-10 max-w-sm">
+          <div className="relative z-10 max-w-3xl">
            <SectionHeading
            eyebrow="Our Mission"
            title="Experts Who Care"
@@ -77,20 +76,6 @@ export default function AboutMission() {
               />
             </Link>
           </div>
-        </div>
-
-        {/* Right Image */}
-        <div className="relative min-h-[470px] overflow-hidden">
-          <Image
-            src="/about/about-team.png"
-            alt="Hakimi and Co professional accounting team"
-            fill
-            sizes="(min-width:1024px) 67vw, 100vw"
-            className="object-cover transition-transform duration-700 hover:scale-105"
-          />
-
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--dark-green)]/10 via-transparent to-transparent" />
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TeamProfileDialog from "./TeamProfileDialog";
 import Link from "next/link";
 
 import {
@@ -38,11 +39,20 @@ const values = [
 
 const teamMembers = [
   {
-    name: "Waiza Hakimi",
-    role: "Chief Executive Officer (CEO)",
+    name: "Waiza Hakimi BSc, CPA",
+    role: "Founder & Managing Partner",
     description:
-      "A professional accountant with many years of experience, Waiza leads Hakimi & Co. as Chief Executive Officer.",
+      "As a Chartered Professional Accountant Waiza Hakimi provides strategic leadership and trusted advisory services to clients, helping them navigate complex business challenges and achieve sustainable growth. With a commitment to excellence, Waiza works closely with clients to deliver practical solutions and long-term value.",
     image: "/team/ceo-portrait.png",
+    linkedin: "",
+  },
+    {
+    name: "Basir Hakimi",
+    role: "Director of Client Relations",
+    description:
+      "Basir Hakimi is the firm’s Director of Client Relations, with 13+ years of experience building trusted client relationships across construction and hospitality.",
+    image: "/team/BAsir-Hakimi.png",
+    imagePosition: "center 15%",
     linkedin: "",
   },
   {
@@ -51,9 +61,10 @@ const teamMembers = [
     description:
       "Mobeen supports bookkeeping, basic tax filing and financial record organization with a reliable, detail-oriented approach.",
     image: "/team/mobeen-amini.jpg",
-    imagePosition: "center 50%",
+    imagePosition: "center 20%",
     linkedin: "",
   },
+ 
   // {
   //   name: "Jessica Huang, CPA, MFin",
   //   role: "Accounting & Audit Professional",
@@ -70,7 +81,7 @@ const teamMembers = [
     description:
       "A data analyst with a background in AI and technology, Laila brings an analytical approach to business insights and digital solutions.",
     image: "/team/laila-habibi.jpeg",
-    imagePosition: "center 50%",
+    imagePosition: "center 35%",
     linkedin: "",
   },
 ];
@@ -229,7 +240,7 @@ function TeamCard({
   };
 }) {
   return (
-    <article className="group flex h-full min-h-[470px] flex-col overflow-hidden rounded-xl border border-[var(--light-green)]/20 bg-[var(--surface)] shadow-[0_10px_35px_color-mix(in_srgb,var(--primary-brown)_6%,transparent)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_18px_45px_color-mix(in_srgb,var(--primary-brown)_13%,transparent)]">
+    <article className="group relative flex h-full min-h-[470px] flex-col overflow-hidden rounded-xl border border-[var(--light-green)]/20 bg-[var(--surface)] shadow-[0_10px_35px_color-mix(in_srgb,var(--primary-brown)_6%,transparent)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_18px_45px_color-mix(in_srgb,var(--primary-brown)_13%,transparent)]">
       <div className="relative h-[245px] w-full shrink-0 overflow-hidden bg-[var(--surface-muted)]">
         <div
           className="absolute inset-x-0 bottom-0"
@@ -259,13 +270,15 @@ function TeamCard({
           {member.description}
         </p>
 
+        <TeamProfileDialog member={member} />
+
         {member.linkedin && (
 <Link
           href={member.linkedin}
           aria-label={`${member.name} on LinkedIn`}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 flex h-9 w-9 items-center justify-center rounded-md bg-[var(--primary-green)] text-[var(--on-dark)] transition duration-300 hover:-translate-y-1 hover:bg-[var(--dark-green)]"
+          className="relative z-20 mt-5 flex h-9 w-9 items-center justify-center rounded-md bg-[var(--primary-green)] text-[var(--on-dark)] transition duration-300 hover:-translate-y-1 hover:bg-[var(--dark-green)]"
         >
           <FaLinkedinIn size={16} />
         </Link>
