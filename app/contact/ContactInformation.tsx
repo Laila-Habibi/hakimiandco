@@ -2,7 +2,6 @@
 import {
   Clock3,
   Mail,
-  MapPin,
   Phone,
 } from "lucide-react";
 
@@ -10,14 +9,6 @@ import SectionHeading from "../components/SectionHeading";
 
 
 const contactDetails = [
-  {
-    icon: MapPin,
-    title: "Our Office",
-    lines: [
-      "172 Britannia Avenue East",
-      "Oshawa, Canada",
-    ],
-  },
   {
     icon: Phone,
     title: "Phone",
@@ -48,7 +39,7 @@ export default function ContactInformation() {
         
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-12 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {contactDetails.map((detail) => {
             const Icon = detail.icon;
 

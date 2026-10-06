@@ -25,7 +25,7 @@ function Hero() {
               Trusted. Experienced. Reliable.
             </p>
 
-            <h1 className="font-serif text-5xl font-semibold leading-[1.05] text-[var(--primary-brown)] sm:text-6xl lg:text-5xl animate-fade-up">
+            <h1 className="font-serif text-5xl font-bold leading-[1.05] text-[var(--primary-brown)] sm:text-6xl lg:text-5xl animate-fade-up">
               Reliable Financial Solutions for Your{" "}
               <span className="text-[var(--primary-green)]">Business</span>
             </h1>
@@ -41,7 +41,9 @@ function Hero() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row animate-fade-up">
               <Link
-                href="/contact"
+                href="https://calendar.app.google/1kMpAVJrn4d5XHKc8"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--primary-green)] px-6 py-4 text-sm font-semibold text-[var(--on-dark)] transition hover:bg-[var(--dark-green)]"
               >
                 <CalendarDays size={18} />

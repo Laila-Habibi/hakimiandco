@@ -1,7 +1,7 @@
 import {
   BriefcaseBusiness,
-  ChartPie,
-  Trophy,
+  Building2,
+  HeartHandshake,
   Users,
 } from "lucide-react";
 
@@ -9,36 +9,36 @@ import AnimatedCounter from "../components/AnimatedCounter";
 
 const statistics = [
   {
-    icon: Users,
-    value: 100,
-    suffix: "+",
-    title: "Happy Clients",
-    description:
-      "Businesses and individuals trust us with their finances.",
-  },
-  {
     icon: BriefcaseBusiness,
-    value: 15,
+    value: 17,
     suffix: "+",
     title: "Years of Experience",
     description:
-      "Years of combined expertise you can rely on.",
+      "17+ years of experience serving businesses and individuals.",
   },
   {
-    icon: ChartPie,
-    value: 98,
-    suffix: "%",
-    title: "Client Retention",
-    description:
-      "Long-term relationships built on trust and results.",
-  },
-  {
-    icon: Trophy,
-    value: 15,
+    icon: Users,
+    value: 300,
     suffix: "+",
-    title: "Industries Served",
+    title: "Happy Clients",
     description:
-      "From startups to established enterprises.",
+      "More than 300 clients trust us with their financial needs.",
+  },
+  {
+    icon: Building2,
+    value: 16,
+    suffix: "+",
+    title: "Industries",
+    description:
+      "Experience across 16+ industries.",
+  },
+  {
+    icon: HeartHandshake,
+    value: 100,
+    suffix: "%",
+    title: "Success",
+    description:
+      "Committed to 100% client success.",
   },
 ];
 

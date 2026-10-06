@@ -83,33 +83,31 @@ function Header({
   };
 
   return (
-    <header className="relative z-50 border-b border-[var(--gold-highlight)]/40 bg-[var(--surface-cream)]">
-      <nav className="mx-auto flex min-h-20 max-w-[1440px] items-center justify-between px-5 lg:px-10">
+    <header className="sticky top-0 z-50 border-b border-[var(--gold-highlight)]/50 bg-[var(--surface-cream)]/95 shadow-[0_6px_24px_color-mix(in_srgb,var(--primary-brown)_5%,transparent)] backdrop-blur-md">
+      <nav className="mx-auto flex min-h-[82px] max-w-[1440px] items-center justify-between gap-2 px-3 sm:gap-5 sm:px-6 lg:px-10">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
-          <div className="relative font-serif text-4xl font-semibold leading-none text-[var(--primary-green)]">
-            H
-
-            <span className="absolute bottom-0 left-4 metallic-gold-text">
-              &amp;
-            </span>
-
-            <span className="ml-1">C</span>
+        <Link href="/" className="flex min-w-0 items-center gap-2.5 sm:gap-3.5">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[var(--gold-highlight)] bg-[var(--primary-green)] font-serif text-[22px] font-semibold leading-none tracking-[-0.12em] text-[var(--primary-golden)] shadow-[0_5px_14px_color-mix(in_srgb,var(--primary-green)_18%,transparent)] sm:h-12 sm:w-12 sm:text-2xl">
+            <span className="-translate-x-0.5">WH</span>
           </div>
 
-          <div>
-            <p className="font-serif text-xl font-semibold tracking-wide text-[var(--primary-brown)]">
-              HAKIMI &amp; CO
+          <div className="min-w-0 leading-none">
+            <p className="font-serif text-[15px] font-bold tracking-[0.015em] text-[var(--primary-brown)] sm:text-base lg:text-[17px]">
+              Waiza Hakimi
             </p>
 
-            <p className="text-[10px] font-semibold tracking-[0.3em] text-[var(--light-green)]">
-              ACCOUNTING
+            <p className="mt-1 font-serif text-[9px] font-medium tracking-[0.07em] text-[var(--text-muted)] sm:text-[10px] lg:text-[11px]">
+              Professional Corporation
+            </p>
+
+            <p className="mt-1.5 hidden text-[7px] font-bold uppercase tracking-[0.13em] text-[var(--dark-green)] sm:block sm:text-[8px] lg:text-[9px]">
+              Chartered Professional Accountant
             </p>
           </div>
         </Link>
 
         {/* Desktop navigation */}
-        <div className="hidden items-center gap-9 text-sm font-medium lg:flex">
+        <div className="hidden items-center gap-5 text-[13px] font-medium xl:gap-8 xl:text-sm lg:flex">
           {navItems.map((item) => {
             if (item.children) {
               return (
@@ -174,16 +172,29 @@ function Header({
           })}
         </div>
 
-        {/* Consultation button */}
-       <Link
-  href="https://calendar.app.google/eHYgEx7mxkgmNMoi9"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-3 rounded-lg bg-[var(--primary-green)] px-6 py-4 text-sm font-semibold text-[var(--on-dark)] transition hover:bg-[var(--dark-green)]"
->
-  Book a Consultation
-  <CalendarDays size={18} />
-</Link>
+        {/* Desktop consultation button */}
+        <Link
+          href="https://calendar.app.google/1kMpAVJrn4d5XHKc8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden items-center gap-3 rounded-lg bg-[var(--primary-green)] px-6 py-4 text-sm font-semibold text-[var(--on-dark)] transition hover:bg-[var(--dark-green)] lg:inline-flex"
+        >
+          Book a Consultation
+          <CalendarDays size={18} />
+        </Link>
+
+        {/* Compact, tap-friendly booking button on mobile */}
+        <Link
+          href="https://calendar.app.google/1kMpAVJrn4d5XHKc8"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Book a consultation"
+          title="Book a consultation"
+          className="ml-auto inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[var(--primary-green)] text-[var(--on-dark)] transition hover:bg-[var(--dark-green)] lg:hidden"
+        >
+          <CalendarDays size={19} />
+          <span className="sr-only">Book a Consultation</span>
+        </Link>
 
         {/* Mobile menu button */}
         <button
@@ -280,7 +291,9 @@ function Header({
             })}
 
             <Link
-              href="/contact"
+              href="https://calendar.app.google/1kMpAVJrn4d5XHKc8"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={closeMobileMenu}
               className="mt-3 rounded-lg bg-[var(--primary-green)] px-5 py-3 text-center text-[var(--on-dark)] transition hover:bg-[var(--dark-green)]"
             >

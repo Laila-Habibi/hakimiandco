@@ -91,25 +91,25 @@ const socialLinks = [
 function Footer() {
   return (
     <footer className="bg-[var(--primary-green)] px-5 pb-8 pt-14 text-[var(--on-dark)] lg:px-10">
-      <div className="mx-auto grid max-w-[1280px] gap-12 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr_1.2fr_1.25fr]">
+      <div className="mx-auto grid max-w-[1280px] gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr_1.2fr_1.25fr]">
         {/* Brand */}
         <div>
           <Link href="/" className="flex w-fit items-center gap-3">
-            <div className="relative shrink-0 font-serif text-4xl font-semibold leading-none text-[var(--primary-golden)]">
-              <span className="metallic-gold-text">H</span>
-              <span className="absolute bottom-0 left-4 metallic-gold-text">
-                &amp;
-              </span>
-              <span className="ml-1 metallic-gold-text">C</span>
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[var(--primary-golden)]/40 bg-[var(--surface)]/10 font-serif text-2xl font-semibold leading-none tracking-[-0.12em] text-[var(--primary-golden)]">
+              <span className="-translate-x-0.5">WH</span>
             </div>
 
-            <div>
-              <p className="font-serif text-lg font-semibold">
-                HAKIMI &amp; CO
+            <div className="leading-none">
+              <p className="font-serif text-base font-semibold tracking-[0.015em]">
+                Waiza Hakimi
               </p>
 
-              <p className="text-[10px] tracking-[0.25em]">
-                ACCOUNTING
+              <p className="mt-1 font-serif text-[10px] font-medium tracking-[0.07em] text-[var(--on-dark)]/80">
+                Professional Corporation
+              </p>
+
+              <p className="mt-1.5 text-[8px] font-semibold uppercase tracking-[0.1em] text-[var(--primary-golden)]">
+                Chartered Professional Accountant
               </p>
             </div>
           </Link>
@@ -154,7 +154,7 @@ function Footer() {
 
         {/* Contact */}
         <div>
-          <h3 className="font-semibold w-fit metallic-gold-text">
+          <h3 className="w-fit border-b border-[var(--primary-golden)]/50 pb-2 font-semibold metallic-gold-text">
             Contact Us
           </h3>
 
@@ -173,8 +173,7 @@ function Footer() {
 
             <FooterContact
               icon={MapPin}
-              text="172 Britannia Avenue West"
-              href="https://maps.google.com"
+              text="New office location coming soon"
             />
 
             <FooterContact
@@ -186,7 +185,7 @@ function Footer() {
 
         {/* Newsletter */}
         <div>
-          <h3 className="font-semibold w-fit metallic-gold-text">
+          <h3 className="w-fit border-b border-[var(--primary-golden)]/50 pb-2 font-semibold metallic-gold-text">
             Newsletter
           </h3>
 
@@ -222,7 +221,7 @@ function Footer() {
       {/* Bottom bar */}
       <div className="mx-auto mt-12 flex max-w-[1280px] flex-col justify-between gap-4 border-t border-[var(--surface)]/15 pt-6 text-xs text-[var(--on-dark)]/65 sm:flex-row">
         <p>
-          © 2026 Hakimi &amp; Co Accounting. All Rights Reserved.
+          © 2026 Waiza Hakimi Professional Corporation. All Rights Reserved.
         </p>
 
         <div className="flex gap-6">

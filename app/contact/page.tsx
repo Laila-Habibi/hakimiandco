@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import ContactHero from "./ContactHero";
 import ContactInformation from "./ContactInformation";
 import ContactFormSection from "./ContactFormSection";

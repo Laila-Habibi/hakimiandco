@@ -424,7 +424,9 @@ function TaxCTA() {
         </div>
 
         <Link
-          href="/contact"
+          href="https://calendar.app.google/1kMpAVJrn4d5XHKc8"
+          target="_blank"
+          rel="noopener noreferrer"
           className="group relative inline-flex shrink-0 items-center gap-3 rounded-lg bg-[var(--surface)] px-6 py-3.5 text-sm font-semibold text-[var(--primary-green)] transition hover:-translate-y-1 hover:shadow-xl"
         >
           Book a Consultation

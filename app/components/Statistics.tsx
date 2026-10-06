@@ -15,27 +15,27 @@ import {
 
 const statistics = [
   {
-    value: 15,
+    value: 17,
     suffix: "+",
     label: "Years of Experience",
     icon: BriefcaseBusiness,
   },
   {
-    value: 500,
+    value: 300,
     suffix: "+",
     label: "Happy Clients",
     icon: Users,
   },
   {
-    value: 20,
+    value: 16,
     suffix: "+",
-    label: "Industries Served",
+    label: "Industries",
     icon: Building2,
   },
   {
     value: 100,
     suffix: "%",
-    label: "Commitment to Success",
+    label: "Success",
     icon: HeartHandshake,
   },
 ];

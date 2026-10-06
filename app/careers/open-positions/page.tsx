@@ -274,7 +274,7 @@ function OpenPositionsHero() {
           <p className="mt-7 max-w-2xl text-base leading-8 text-[var(--text-body)]">
             We&apos;re always looking for talented, motivated and passionate
             individuals to join our team. Explore our current opportunities
-            and take the next step in your career with Hakimi &amp; Co.
+            and take the next step in your career with Waiza Hakimi Professional Corporation.
           </p>
 
         

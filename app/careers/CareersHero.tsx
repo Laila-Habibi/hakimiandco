@@ -56,9 +56,9 @@ export default function CareersHero() {
           </p>
 
           <h1 className="font-serif text-5xl font-semibold leading-[1.05] text-[var(--primary-brown)] sm:text-6xl lg:text-5xl animate-fade-up">
-             Careers
+             Careers at
             <span className="block text-[var(--primary-green)]">
-               at Hakimi &amp; Co
+               Waiza Hakimi Professional Corporation
             </span>
           </h1>
 

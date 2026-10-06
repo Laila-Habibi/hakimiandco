@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <title>Hakimi &amp; Co. Accounting</title>
+  <title>Waiza Hakimi Professional Corporation | Chartered Professional Accountant</title>
   <rect width="64" height="64" rx="12" fill="#3a4f1e"/>
   <defs>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
@@ -9,8 +9,7 @@
     </linearGradient>
   </defs>
   <g fill="url(#gold)" font-family="Georgia, serif" font-size="43">
-    <text x="3" y="47">H</text>
-    <text x="31" y="47">C</text>
-    <text x="21" y="47" font-size="31">&amp;</text>
+    <text x="3" y="47">W</text>
+    <text x="31" y="47">H</text>
   </g>
 </svg>

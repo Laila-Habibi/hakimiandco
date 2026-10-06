@@ -412,7 +412,7 @@ export default function JuniorAccountantApplicationPage() {
               <div className="space-y-5">
                 <FormTextarea
                   id="motivation"
-                  label="Why would you like to work at Hakimi & Co?"
+                  label="Why would you like to work at Waiza Hakimi Professional Corporation?"
                   required
                   value={formData.motivation}
                   onChange={(value) => updateField("motivation", value)}

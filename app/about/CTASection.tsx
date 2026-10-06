@@ -60,7 +60,9 @@ export default function AboutCTA() {
 
           {/* CTA Button */}
           <Link
-            href="/contact"
+            href="https://calendar.app.google/1kMpAVJrn4d5XHKc8"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex shrink-0 items-center gap-3 rounded-md bg-[var(--primary-green)] px-7 py-4 text-sm font-semibold text-[var(--on-dark)] transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--dark-green)] hover:shadow-xl"
           >
             Book a Consultation

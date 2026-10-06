@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hakimi & Co. Accounting",
-  description: "Accounting, tax, payroll, business advisory and AI integration services from Hakimi & Co.",
+  title: "Waiza Hakimi Professional Corporation | Chartered Professional Accountant",
+  description: "Chartered professional accounting, tax, payroll, business advisory and AI integration services from Waiza Hakimi Professional Corporation.",
 };
 
 export default function RootLayout({
