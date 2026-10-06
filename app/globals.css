@@ -110,6 +110,27 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 639px) {
+  main h1[class*="text-4xl"],
+  main h1[class*="text-5xl"],
+  main h1[class*="text-6xl"] {
+    font-size: clamp(1.875rem, 8vw, 2.25rem);
+  }
+
+  main h2[class*="text-4xl"] {
+    font-size: 1.75rem;
+  }
+
+  main h2[class*="text-3xl"] {
+    font-size: 1.625rem;
+  }
+
+  main h2[class*="text-2xl"] {
+    font-size: 1.25rem;
+  }
+}
+
 @utility metallic-gold {
   background-color: var(--primary-golden);
   background-image: var(--metallic-gold-gradient);
