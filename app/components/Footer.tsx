@@ -173,7 +173,7 @@ function Footer() {
 
             <FooterContact
               icon={MapPin}
-              text="New office location coming soon"
+              text="170 Commercial Avenue, Ajax, Ontario"
             />
 
             <FooterContact

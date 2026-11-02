@@ -11,10 +11,10 @@ export default function OfficeLocation() {
         </div>
         <div>
           <p className="font-serif text-2xl font-semibold text-[var(--primary-brown)]">
-            New office location coming soon
+            Our Office
           </p>
           <p className="mt-2 text-sm leading-6 text-[var(--text-body)]">
-            Please contact us by phone or email while we update our office details.
+            170 Commercial Avenue, Ajax, Ontario
           </p>
         </div>
       </div>
