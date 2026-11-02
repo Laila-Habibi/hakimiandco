@@ -161,8 +161,8 @@ function Footer() {
           <div className="mt-5 space-y-4 text-sm text-[var(--on-dark)]/80">
             <FooterContact
               icon={Phone}
-              text="(647) 226 2492"
-              href="tel:+16472262492"
+              text="647-404-2492"
+              href="tel:+16474042492"
             />
 
             <FooterContact
